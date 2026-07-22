@@ -7,3 +7,11 @@ Case study pages:
 - `workflows.html`
 
 Replace the placeholder project copy, project URLs, and `hello@example.com` in `index.html` with your own details.
+
+Serve the folder with a static server because the 3D model loads external assets:
+
+```bash
+python3 -m http.server 4173
+```
+
+Then open `http://localhost:4173`.

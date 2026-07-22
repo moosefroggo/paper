@@ -1,0 +1,11 @@
+Model Information:
+* title:	Thinking emoji
+* source:	https://sketchfab.com/3d-models/thinking-emoji-149e21aa8901486a9317df4657407182
+* author:	Ricardo Sanchez (https://sketchfab.com/380660711785)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Thinking emoji" (https://sketchfab.com/3d-models/thinking-emoji-149e21aa8901486a9317df4657407182) by Ricardo Sanchez (https://sketchfab.com/380660711785) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

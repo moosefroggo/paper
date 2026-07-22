@@ -75,7 +75,7 @@ a:focus-visible {
   min-width: 0;
   min-height: 0;
   overflow: hidden;
-  padding: 28px;
+  padding: clamp(28px, 4vh, 48px) clamp(28px, 3vw, 44px);
 }
 
 .project-link,
@@ -100,8 +100,19 @@ a:focus-visible {
   width: 100%;
 }
 
-.project-list {
+.project-stack {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 0;
+}
+
+.pitch-row {
+  display: flex;
   justify-content: flex-start;
+  width: 100%;
 }
 
 .project-row {
@@ -179,29 +190,75 @@ h1 {
 }
 
 .manifesto {
+  position: relative;
+  z-index: 4;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: 1fr auto;
+  overflow: visible;
   align-items: end;
-  gap: 24px;
+  column-gap: 40px;
+  row-gap: 14px;
 }
 
-.manifesto p {
+.manifesto-model {
+  position: relative;
+  z-index: 4;
+  align-self: end;
+  grid-column: 1;
+  grid-row: 1;
+  overflow: visible;
+  display: block;
+  width: clamp(82px, 9vw, 140px);
+  height: clamp(82px, 9vw, 140px);
+  margin-left: -10px;
+}
+
+.manifesto-copy {
+  grid-column: 1;
+  grid-row: 2;
   max-width: 520px;
+}
+
+.manifesto-title,
+.manifesto-body {
   margin: 0;
-  font-size: clamp(0.92rem, min(1.35vw, 3svh), 1.3rem);
   letter-spacing: -0.03em;
   line-height: 1.25;
 }
 
+.manifesto-title {
+  margin-bottom: 8px;
+  font-size: clamp(1.05rem, min(1.5vw, 3.5svh), 1.4rem);
+  font-weight: 500;
+}
+
+.manifesto-body {
+  color: var(--muted);
+  font-size: clamp(0.92rem, min(1.2vw, 3svh), 1.15rem);
+}
+
 .pitch-link {
+  grid-column: 2;
+  grid-row: 2;
   align-self: end;
-  border-bottom: 1px solid var(--ink);
-  padding-bottom: 4px;
   font-size: 0.82rem;
+  transition: color 180ms ease;
+}
+
+.pitch-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 .pitch-link span {
   color: var(--accent);
+  transition: transform 180ms ease;
+}
+
+.pitch-link:hover span {
+  display: inline-block;
+  transform: translate(3px, -3px);
 }
 
 .contact {
@@ -234,11 +291,11 @@ h1 {
 .photo-stack {
   position: fixed;
   z-index: 3;
-  top: 50%;
-  left: 50%;
+  top: 75svh;
+  left: calc(50vw - 72px);
   width: clamp(92px, 12vw, 180px);
   aspect-ratio: 4 / 5;
-  transform: translate(-50%, -50%);
+  transform: translate(-100%, -50%);
   pointer-events: auto;
   cursor: pointer;
 }
@@ -273,19 +330,19 @@ h1 {
 }
 
 .photo-stack:hover .photo-card-one {
-  transform: translate(-78px, -56px) rotate(-14deg);
+  transform: translate(calc(-12vw - 50%), calc(-12vh - 50%)) rotate(-14deg);
 }
 
 .photo-stack:hover .photo-card-two {
-  transform: translate(78px, -48px) rotate(13deg);
+  transform: translate(calc(12vw - 50%), calc(-12vh - 50%)) rotate(13deg);
 }
 
 .photo-stack:hover .photo-card-three {
-  transform: translate(-64px, 62px) rotate(11deg);
+  transform: translate(calc(-12vw - 50%), calc(12vh - 50%)) rotate(11deg);
 }
 
 .photo-stack:hover .photo-card-four {
-  transform: translate(58px, 52px) rotate(-7deg);
+  transform: translate(calc(12vw - 50%), calc(12vh - 50%)) rotate(-7deg);
 }
 
 .cursor-hint {
@@ -315,11 +372,12 @@ h1 {
   }
 
   .cell {
-    padding: 20px;
+    padding: clamp(20px, 3vh, 32px);
     overflow: hidden;
   }
 
   .photo-stack {
+    left: calc(50vw - 40px);
     width: 82px;
   }
 
@@ -340,19 +398,19 @@ h1 {
   }
 
   .photo-stack:hover .photo-card-one {
-    transform: translate(-48px, -36px) rotate(-14deg);
+    transform: translate(calc(-12vw - 50%), calc(-12vh - 50%)) rotate(-14deg);
   }
 
   .photo-stack:hover .photo-card-two {
-    transform: translate(48px, -32px) rotate(13deg);
+    transform: translate(calc(12vw - 50%), calc(-12vh - 50%)) rotate(13deg);
   }
 
   .photo-stack:hover .photo-card-three {
-    transform: translate(-40px, 42px) rotate(11deg);
+    transform: translate(calc(-12vw - 50%), calc(12vh - 50%)) rotate(11deg);
   }
 
   .photo-stack:hover .photo-card-four {
-    transform: translate(36px, 32px) rotate(-7deg);
+    transform: translate(calc(12vw - 50%), calc(12vh - 50%)) rotate(-7deg);
   }
 
   .project-row {
@@ -364,6 +422,15 @@ h1 {
     gap: 18px;
   }
 
+  .project-list[aria-labelledby="projects-title"],
+  .project-list[aria-labelledby="case-studies-title"] {
+    padding-bottom: 28px;
+  }
+
+  .project-list[aria-labelledby="case-studies-title"] .pitch-link {
+    margin-top: auto;
+  }
+
   .project-link h2 {
     font-size: clamp(1.8rem, 8vw, 3.5rem);
   }
@@ -372,15 +439,19 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 14px;
   }
 
-  .manifesto p,
-  .pitch-link {
-    position: static;
+  .manifesto-model {
+    align-self: flex-start;
+    width: 76px;
+    height: 76px;
+    margin-left: -6px;
+    margin-bottom: 0;
   }
 
-  .manifesto p {
+  .manifesto-copy {
     max-width: 100%;
   }
 
@@ -399,7 +470,17 @@ h1 {
   }
 }
 
+@media (min-width: 761px) {
+  .statement {
+    padding-right: clamp(220px, 18vw, 280px);
+  }
+}
+
 @media (min-width: 1600px) {
+  .manifesto {
+    column-gap: 24px;
+  }
+
   h1 {
     font-size: clamp(2.6rem, min(6vw, 8svh), 9rem);
   }
@@ -412,8 +493,8 @@ h1 {
     font-size: clamp(0.76rem, min(1.2vw, 2.5svh), 1.2rem);
   }
 
-  .manifesto p {
-    font-size: clamp(0.92rem, min(1.35vw, 3svh), 1.6rem);
+  .manifesto-body {
+    font-size: clamp(0.9rem, min(1.2vw, 3svh), 1.15rem);
   }
 }
 

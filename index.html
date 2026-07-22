@@ -6,6 +6,7 @@
     <meta name="description" content="Mustafa, independent designer and developer." />
     <title>Mustafa Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </head>
   <body>
     <main class="hero-grid">
@@ -37,14 +38,19 @@
       </section>
 
       <section class="cell project-list" aria-labelledby="case-studies-title">
-        <h2 class="cell-title" id="case-studies-title">Case studies for prehistoric products designed by hand (Figma)</h2>
-        <div class="project-items">
-          <a class="project-row" href="engine-immobilizer.html">
-            <span>A remote vehicle immobilization experience that added $8M to ARR at Motive</span><span aria-hidden="true">↗</span>
-          </a>
-          <a class="project-row" href="workflows.html">
-            <span>A unified workflow management tool that lets you track PRDs, tasks, projects, and designs without leaving the platform.</span><span aria-hidden="true">↗</span>
-          </a>
+        <h2 class="cell-title" id="case-studies-title">Case studies for prehistoric products</h2>
+        <div class="project-stack">
+          <div class="project-items">
+            <a class="project-row" href="engine-immobilizer.html">
+              <span>A remote vehicle immobilization experience that added $8M to ARR at Motive</span><span aria-hidden="true">↗</span>
+            </a>
+            <a class="project-row" href="workflows.html">
+              <span>A unified workflow management tool that lets you track PRDs, tasks, projects, and designs without leaving the platform.</span><span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="pitch-row">
+            <a class="pitch-link" href="https://pitch.com/v/slide-deck-jq3j7w" target="_blank" rel="noreferrer">Do you prefer a PowerPoint? <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </section>
 
@@ -54,8 +60,11 @@
       </section>
 
       <section class="cell manifesto" aria-label="Manifesto">
-        <p><strong>Founder's dilemma:</strong> The retro subculture keeps coming back. Y2K jorts? Everyone at the thrift store was rocking those. It represents a safe mean, acceptable but not too out there. A lot of products I use look like this. Is yours the same?</p>
-        <a class="pitch-link" href="https://pitch.com/v/slide-deck-jq3j7w" target="_blank" rel="noreferrer">Do you prefer a PowerPoint? <span aria-hidden="true">↗</span></a>
+        <model-viewer class="manifesto-model" src="portfolio-photos/thinking_emoji/scene.gltf" alt="Thinking face 3D model" camera-orbit="0deg 75deg 5m" camera-controls="false" disable-zoom="true" interaction-prompt="none" environment-image="neutral" skybox-image="" shadow-intensity="0"></model-viewer>
+        <div class="manifesto-copy">
+          <p class="manifesto-title">Founder's dilemma:</p>
+          <p class="manifesto-body">The retro subculture keeps coming back. Y2K jorts? Everyone at the thrift store is rocking those. It represents a safe mean, acceptable but not too out there. A lot of products I use look like this. Is yours the same?</p>
+        </div>
       </section>
     </main>
 
@@ -86,6 +95,20 @@
         cursorHint.style.left = `${Math.max(12, left)}px`
         cursorHint.style.top = `${Math.max(cursorHint.offsetHeight / 2 + 12, top)}px`
       })
+
+      const thinker = document.querySelector('.manifesto-model')
+      let thinkerRotation = 0
+      let lastFrame = performance.now()
+
+      function rotateThinker(now) {
+        const delta = Math.min((now - lastFrame) / 1000, 0.05)
+        thinkerRotation = (thinkerRotation + delta * 24) % 360
+        thinker.orientation = `0deg 0deg ${thinkerRotation}deg`
+        lastFrame = now
+        requestAnimationFrame(rotateThinker)
+      }
+
+      requestAnimationFrame(rotateThinker)
     </script>
   </body>
 </html>
