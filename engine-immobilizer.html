@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Engine Immobilizer, a Motive case study by Mustafa." />
+    <title>Engine Immobilizer: Mustafa</title>
+    <link rel="stylesheet" href="case-study.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="index.html">Mustafa<span>.</span></a>
+      <a class="back-link" href="index.html">Back to portfolio <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main class="case-study">
+      <section class="case-hero">
+        <h1>Engine Immobilizer</h1>
+        <p class="summary">Remote immobilization for fleet managers responding to vehicle theft.</p>
+        <video class="case-hero-media" src="case-media/engine/hero.mp4" autoplay controls muted loop playsinline preload="auto" aria-label="Engine Immobilizer product demo"></video>
+      </section>
+
+      <section class="case-meta" aria-label="Project details">
+        <div class="meta-item"><p class="meta-label">Role</p><p>Product Design Lead</p></div>
+        <div class="meta-item"><p class="meta-label">Duration</p><p>2 months</p></div>
+        <div class="meta-item"><p class="meta-label">Team</p><p>Design, PM, Engineering, Hardware</p></div>
+      </section>
+
+      <div class="case-content">
+        <section class="case-section">
+          <p class="section-label">The problem</p>
+          <div class="case-copy">
+            <h2>Motive needed remote immobilization to enter the Mexican market.</h2>
+            <p>When Motive started expanding to Mexico in Q3 2023, the feedback was clear: 90% of prospects asked for remote immobilization. We’d already lost deals over it. This went from a nice-to-have feature to a blocker between us and an entire market.</p>
+            <p>We had until the end of Q4 to figure it out and ship in Q1 2024.</p>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <p class="section-label">Why this was hard</p>
+          <div class="case-copy">
+            <h2>The feature had to fit four platform changes.</h2>
+            <p>The timing was brutal. Admin was mid-migration from 1.0 to 2.0, and the Vehicles page we needed to redesign hadn’t been rebuilt yet. Fleet View was getting new map icons simultaneously. A Device Hub was in early development that would eventually own all device controls.</p>
+            <p>We were also sourcing hardware from a third-party vendor for the first time, which limited what device data we could surface and how it communicated with our systems.</p>
+          </div>
+        </section>
+
+        <figure class="media-block media-pair">
+          <div>
+            <img src="case-media/engine/admin1.0.png" alt="Motive Admin 1.0 interface" />
+            <figcaption>Admin 1.0</figcaption>
+          </div>
+          <div>
+            <img src="case-media/engine/Admin2.0.png" alt="Planned Motive Admin 2.0 interface" />
+            <figcaption>Planned Admin 2.0</figcaption>
+          </div>
+          <p class="media-caption">The existing Admin surfaces were not built for immobilization.</p>
+        </figure>
+
+        <section class="case-section">
+          <p class="section-label">Customer research</p>
+          <div class="case-copy">
+            <h2>Fleet managers made the decision.</h2>
+            <ul class="quote-list">
+              <li>“Fleet managers, not drivers, control immobilization.” The decision to kill the engine sits with the manager, not the driver.</li>
+              <li>“Vehicles get immobilized roughly five times a month.” The top reasons were attempted robbery and drunk driving.</li>
+              <li>“Tampering is a real fear.” Thieves know where devices are installed and can damage the wiring to disable the system.</li>
+              <li>“Dead zones on highways are a problem.” If there’s no signal, the device is useless and customers wanted a fallback.</li>
+            </ul>
+          </div>
+        </section>
+
+        <figure class="media-block media-full">
+          <img src="case-media/engine/customer-call.png" alt="Fleet manager customer research call" />
+          <figcaption>Walking fleet managers through the solution. The designs were in Spanish for the call.</figcaption>
+        </figure>
+
+        <section class="case-section">
+          <p class="section-label">Design decisions</p>
+          <div class="case-copy">
+            <h2>We tested five places for the control.</h2>
+            <p>Placement was the critical decision. I tested five different positions: action bar, below vehicle status, next to it, a dedicated section, and a persistent banner.</p>
+            <p>The banner won because immobilized vehicles are rare, appearing in less than 1% of fleets. It stood out without cluttering the normal view. Fleet View became a real-time status page, and the first release covered the starter line. Fuel line deceleration was left for a later release.</p>
+          </div>
+        </section>
+
+        <figure class="media-block media-trio">
+          <div>
+            <img src="case-media/engine/iteration-1.png" alt="First engine immobilizer interface iteration" />
+            <figcaption>Iteration 1</figcaption>
+          </div>
+          <div>
+            <img src="case-media/engine/iteration-4.png" alt="Fourth engine immobilizer interface iteration" />
+            <figcaption>Iteration 4</figcaption>
+          </div>
+          <div>
+            <img src="case-media/engine/iteration-final.png" alt="Final engine immobilizer interface" />
+            <figcaption>Final</figcaption>
+          </div>
+          <p class="media-caption">The persistent banner made the state visible without adding clutter to the normal view.</p>
+        </figure>
+
+        <section class="case-section">
+          <p class="section-label">What shipped</p>
+          <div class="case-copy">
+            <ul class="feature-list">
+              <li><strong>Immobilized Banner</strong><span>A persistent banner on the vehicle detail page showing who immobilized the vehicle, when, and from where.</span><video src="case-media/engine/banner-video.webm" autoplay controls muted loop playsinline preload="metadata" aria-label="Immobilized vehicle banner demo"></video></li>
+              <li><strong>Live Tracking</strong><span>Real-time location data, live video feed, and follow mode to track stolen vehicles. Immobilized vehicles surface at the top of the fleet list.</span><video src="case-media/engine/map-video.webm" autoplay controls muted loop playsinline preload="metadata" aria-label="Live tracking demo"></video></li>
+              <li><strong>Trip Timeline</strong><span>Immobilization events logged on the vehicle’s trip timeline, alongside dashcam footage for full context.</span><video src="case-media/engine/vehicle-history.webm" autoplay controls muted loop playsinline preload="metadata" aria-label="Trip timeline demo"></video></li>
+              <li><strong>Tamper &amp; Jammer Alerts</strong><span>Post-launch alerts for physical device removal and signal jamming, added based on direct customer feedback.</span><video src="case-media/engine/notifications-video.webm" autoplay controls muted loop playsinline preload="metadata" aria-label="Tamper and jammer alerts demo"></video></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <p class="section-label">Impact</p>
+          <div class="case-copy">
+            <h2>Added $8M to Motive’s ARR.</h2>
+            <p>Engine Immobilizer opened the Mexican market for Motive and added $8M to ARR. Customers reported lower insurance premiums and a measurable drop in cargo theft.</p>
+          </div>
+        </section>
+
+      </div>
+
+      <nav class="case-nav" aria-label="Case study navigation">
+        <a class="case-link" href="index.html"><span aria-hidden="true">←</span> All work</a>
+        <a class="case-link" href="workflows.html">Next case study <span aria-hidden="true">→</span></a>
+      </nav>
+    </main>
+
+    <footer class="site-footer"><span>© Mustafa</span><span>Engine Immobilizer</span></footer>
+  </body>
+</html>

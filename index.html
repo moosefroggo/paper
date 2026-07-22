@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mustafa, independent designer and developer." />
+    <title>Mustafa Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="hero-grid">
+      <section class="cell project-list" aria-labelledby="projects-title">
+        <h2 class="cell-title" id="projects-title">Here are some of my vibe coded projects</h2>
+        <div class="project-items">
+          <a class="project-row" href="https://vantheon-architecture.vercel.app" target="_blank" rel="noreferrer">
+            <span>High performance frontend for an agentic trading platform</span><span aria-hidden="true">↗</span>
+          </a>
+          <a class="project-row" href="https://nectar-social-prototype.vercel.app" target="_blank" rel="noreferrer">
+            <span>A recruitment platform for finding candidates who don’t apply</span><span aria-hidden="true">↗</span>
+          </a>
+          <a class="project-row" href="https://nextwork-all-animations-consolidate.vercel.app" target="_blank" rel="noreferrer">
+            <span>2D and 3D Animations to visualize git workflow using GSAP, CSS, and Three.js</span><span aria-hidden="true">↗</span>
+          </a>
+          <a class="project-row" href="https://pseudoconverter.vercel.app" target="_blank" rel="noreferrer">
+            <span>Micro-interactions and transitions for learner experience at NextWork</span><span aria-hidden="true">↗</span>
+          </a>
+          <a class="project-row" href="https://nextwork-portfolio-themes.vercel.app" target="_blank" rel="noreferrer">
+            <span>A portfolio generator capable of over 2 billion combinations, no inference needed</span><span aria-hidden="true">↗</span>
+          </a>
+          <a class="project-row" href="https://vc-jobs.vercel.app" target="_blank" rel="noreferrer">
+            <span>A job board that tracks 17 most popular vc funds for jobs, updated every 24 hours</span><span aria-hidden="true">↗</span>
+          </a>
+          <a class="project-row" href="https://moosefroggo.github.io/3d-gradients-generator/" target="_blank" rel="noreferrer">
+            <span>A Three.js and GLSL based gradient generator using shaders and physics</span><span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="cell project-list" aria-labelledby="case-studies-title">
+        <h2 class="cell-title" id="case-studies-title">Case studies for prehistoric products designed by hand (Figma)</h2>
+        <div class="project-items">
+          <a class="project-row" href="engine-immobilizer.html">
+            <span>A remote vehicle immobilization experience that added $8M to ARR at Motive</span><span aria-hidden="true">↗</span>
+          </a>
+          <a class="project-row" href="workflows.html">
+            <span>A unified workflow management tool that lets you track PRDs, tasks, projects, and designs without leaving the platform.</span><span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="cell statement" aria-labelledby="intro-title">
+        <h1 class="hero-copy" id="intro-title">I am Mustafa, my primary drivers in life are overcoming limits and doing something meaningful. I derive meaning from my work, which is why I jump right into new challenges, kind of like an adrenaline junkie.</h1>
+      </section>
+
+      <section class="cell manifesto" aria-label="Manifesto">
+        <p><strong>Founder's dilemma:</strong> The retro subculture keeps coming back. Y2K jorts? Everyone at the thrift store was rocking those. It represents a safe mean, acceptable but not too out there. A lot of products I use look like this. Is yours the same?</p>
+        <a class="pitch-link" href="https://pitch.com/v/slide-deck-jq3j7w" target="_blank" rel="noreferrer">Do you prefer a PowerPoint? <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <div class="photo-stack" aria-hidden="true">
+      <img class="photo-card photo-card-one" src="portfolio-photos/Grad.jpeg" alt="" />
+      <img class="photo-card photo-card-two" src="portfolio-photos/guitar.JPG" alt="" />
+      <img class="photo-card photo-card-three" src="portfolio-photos/Hike.jpg" alt="" />
+      <img class="photo-card photo-card-four" src="portfolio-photos/UT.jpg" alt="" />
+    </div>
+
+    <div class="cursor-hint" aria-hidden="true">Opens in a new tab</div>
+
+    <script>
+      const cursorHint = document.querySelector('.cursor-hint')
+      const projectLinks = document.querySelectorAll('.project-row, .pitch-link')
+
+      projectLinks.forEach((link) => {
+        link.addEventListener('mouseenter', () => {
+          cursorHint.textContent = link.target === '_blank' ? 'Opens in a new tab' : 'Opens in current tab'
+          cursorHint.classList.add('is-visible')
+        })
+        link.addEventListener('mouseleave', () => cursorHint.classList.remove('is-visible'))
+      })
+
+      window.addEventListener('mousemove', (event) => {
+        const left = Math.min(event.clientX + 16, window.innerWidth - cursorHint.offsetWidth - 12)
+        const top = Math.min(event.clientY, window.innerHeight - cursorHint.offsetHeight / 2 - 12)
+        cursorHint.style.left = `${Math.max(12, left)}px`
+        cursorHint.style.top = `${Math.max(cursorHint.offsetHeight / 2 + 12, top)}px`
+      })
+    </script>
+  </body>
+</html>
