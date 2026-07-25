@@ -301,11 +301,35 @@ h1 {
   text-decoration-thickness: 0.06em;
   text-underline-offset: 0.1em;
   cursor: pointer;
+  transition: color 180ms ease;
 }
 
 .photo-trigger:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 3px;
+}
+
+.mustafa-reveal:hover .photo-trigger,
+.mustafa-reveal:focus-within .photo-trigger {
+  animation: mustafa-color-shift 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes mustafa-color-shift {
+  0% {
+    color: var(--ink);
+  }
+
+  34% {
+    color: #e76732;
+  }
+
+  67% {
+    color: #7767c7;
+  }
+
+  100% {
+    color: #4d9273;
+  }
 }
 
 .gallery-photo {
@@ -673,5 +697,11 @@ h1 {
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
+  }
+
+  .mustafa-reveal:hover .photo-trigger,
+  .mustafa-reveal:focus-within .photo-trigger {
+    animation: none;
+    color: #e76732;
   }
 }
