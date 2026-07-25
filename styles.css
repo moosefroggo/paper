@@ -199,6 +199,27 @@ h1 {
   gap: 8px;
 }
 
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  padding-top: 4px;
+  color: var(--link);
+  font-size: clamp(13px, 0.95vw, 14px);
+  line-height: 1.4;
+}
+
+.profile-links a {
+  transition: color 180ms ease;
+}
+
+.profile-links a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .mustafa-reveal {
   position: relative;
   display: inline-block;
