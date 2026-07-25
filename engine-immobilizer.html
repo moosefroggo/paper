@@ -21,18 +21,26 @@
       </section>
 
       <section class="case-meta" aria-label="Project details">
-        <div class="meta-item"><p class="meta-label">Role</p><p>Product Design Lead</p></div>
+        <div class="meta-item"><p class="meta-label">Role</p><p>Product Design</p></div>
         <div class="meta-item"><p class="meta-label">Duration</p><p>2 months</p></div>
-        <div class="meta-item"><p class="meta-label">Team</p><p>Design, PM, Engineering, Hardware</p></div>
+        <div class="meta-item"><p class="meta-label">Team</p><p>PM, Design Manager, VP of Design, 2 Engineering Managers</p></div>
       </section>
 
       <div class="case-content">
         <section class="case-section">
           <p class="section-label">The problem</p>
           <div class="case-copy">
-            <h2>Motive needed remote immobilization to enter the Mexican market.</h2>
-            <p>When Motive started expanding to Mexico in Q3 2023, the feedback was clear: 90% of prospects asked for remote immobilization. We’d already lost deals over it. This went from a nice-to-have feature to a blocker between us and an entire market.</p>
-            <p>We had until the end of Q4 to figure it out and ship in Q1 2024.</p>
+            <h2>Engine Immobilizer became a blocker.</h2>
+            <p>I joined Motive in Q3 2023, right as plans to expand into Mexico were already in motion. Sales Engineers on the ground told us that 90% of prospects wanted remote immobilization. We had already lost one significant prospect because we did not have it. This was the only core requirement missing from our product offering.</p>
+            <p>We backtracked on our priorities and had the rest of Q4 to figure it out for a Q1 2024 launch. Hardware, Tracking, and Platform all had to move together.</p>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <p class="section-label">My role</p>
+          <div class="case-copy">
+            <h2>Leading the design.</h2>
+            <p>I joined the Hardware team and partnered with Product Manager Nikhil Karanam to get the product to launch. The work crossed Hardware, Tracking, and Platform, with support from content, visual, and 3D design.</p>
           </div>
         </section>
 
@@ -40,9 +48,9 @@
           <div class="case-text">
             <p class="section-label">Why this was hard</p>
             <div class="case-copy">
-            <h2>The feature had to fit four platform changes.</h2>
-            <p>The timing was brutal. Admin was mid-migration from 1.0 to 2.0, and the Vehicles page we needed to redesign hadn’t been rebuilt yet. Fleet View was getting new map icons simultaneously. A Device Hub was in early development that would eventually own all device controls.</p>
-            <p>We were also sourcing hardware from a third-party vendor for the first time, which limited what device data we could surface and how it communicated with our systems.</p>
+            <h2>Major systematic updates were already in progress.</h2>
+            <p>Admin was moving from 1.0 to 2.0. The Vehicles page had been designed for 2.0 but never built, while the 1.0 version kept collecting one-off additions. I had to strip the page down, rebuild its hierarchy, and add Engine Immobilizer without creating work that would be thrown away a few months later.</p>
+            <p>Fleet View’s maps, icons, and historical tracking were also changing. Device Hub was still only a plan. We could not build the hardware in-house, so Motive sourced a third-party device for the first time. Those decisions affected what data we could show, how the immobilizer paired with the Vehicle Gateway, and what happened when the signal was lost.</p>
             </div>
           </div>
           <figure class="media-block media-pair compare-pair under-text">
@@ -62,12 +70,13 @@
           <div class="case-text">
             <p class="section-label">Customer research</p>
             <div class="case-copy">
-            <h2>Fleet managers made the decision.</h2>
+            <h2>The control belonged to fleet managers.</h2>
             <ul class="quote-list">
-              <li>“Only fleet managers should be able to immobilize vehicles.” This was a non-negotiable for our prospects.</li>
-              <li>“Vehicles get immobilized roughly five times a month.” The top reasons were attempted robbery and drunk driving.</li>
-              <li>“Thieves know where the devices are installed and can cut the wiring to disable them.” Bad actors adapt very quickly.</li>
-              <li>“Dead zones on highways are a problem.” If there’s no signal, the device is useless and customers wanted a fallback.</li>
+              <li>The vehicle immobilization control belonged to the fleet manager. Drivers should not manage it except in an emergency.</li>
+              <li>A vehicle was immobilized about five times per month, mostly after attempted robbery or drunk driving.</li>
+              <li>The request usually began with a panic button or a call from the driver to the fleet manager.</li>
+              <li>Thieves knew where the devices were installed and could cut the wiring.</li>
+              <li>Dead zones made remote commands unreliable, so fleets needed a fallback.</li>
             </ul>
             </div>
           </div>
@@ -81,9 +90,9 @@
           <div class="case-text">
             <p class="section-label">Design decisions</p>
             <div class="case-copy">
-            <h2>We tested five places for the control.</h2>
-            <p>Placement was the critical decision. I tested five different positions: action bar, below vehicle status, next to it, a dedicated section, and a persistent banner.</p>
-            <p>The banner won because immobilized vehicles are rare, appearing in less than 1% of fleets. It stood out without cluttering the normal view. Fleet View became a real-time status page, and the first release covered the starter line. Fuel line deceleration was left for a later release.</p>
+            <h2>We tried five placements before choosing the banner.</h2>
+            <p>I tried the action bar, below the vehicle status, beside the status, a dedicated section on the left, and a banner under the tabs.</p>
+            <p>The banner would appear for less than 1% of vehicles at a time. If it was any quieter, it would be easy to miss. The first release handled starter-line immobilization. Fuel-line deceleration stayed on the roadmap for later.</p>
             </div>
           </div>
           <figure class="media-block media-trio">
@@ -99,7 +108,7 @@
               <img src="case-media/engine/iteration-final.png" alt="Final engine immobilizer interface" />
               <figcaption>Final</figcaption>
             </div>
-            <p class="media-caption">The persistent banner made the state visible without adding clutter to the normal view.</p>
+            <p class="media-caption">Final placement: a persistent banner on the vehicle detail page.</p>
           </figure>
         </section>
 
@@ -108,9 +117,9 @@
           <div class="case-copy">
             <ul class="feature-list">
               <li><strong>Immobilized Banner</strong><span>A persistent banner on the vehicle detail page showing who immobilized the vehicle, when, and from where.</span><video src="case-media/engine/banner-video.webm" autoplay muted loop playsinline preload="metadata" aria-label="Immobilized vehicle banner demo"></video></li>
-              <li><strong>Live Tracking</strong><span>Real-time location data, live video feed, and follow mode to track stolen vehicles. Immobilized vehicles surface at the top of the fleet list.</span><video src="case-media/engine/map-video.webm" autoplay muted loop playsinline preload="metadata" aria-label="Live tracking demo"></video></li>
-              <li><strong>Trip Timeline</strong><span>Immobilization events logged on the vehicle’s trip timeline, alongside dashcam footage for full context.</span><video src="case-media/engine/vehicle-history.webm" autoplay muted loop playsinline preload="metadata" aria-label="Trip timeline demo"></video></li>
-              <li><strong>Tamper &amp; Jammer Alerts</strong><span>Post-launch alerts for physical device removal and signal jamming, added based on direct customer feedback.</span><video src="case-media/engine/notifications-video.webm" autoplay muted loop playsinline preload="metadata" aria-label="Tamper and jammer alerts demo"></video></li>
+              <li><strong>Live Tracking</strong><span>Location, live video, and follow mode for tracking a stolen vehicle. Immobilized vehicles appeared at the top of the fleet list.</span><video src="case-media/engine/map-video.webm" autoplay muted loop playsinline preload="metadata" aria-label="Live tracking demo"></video></li>
+              <li><strong>Trip Timeline</strong><span>Immobilization events appeared on the vehicle’s trip timeline beside dashcam footage, helping fleets reconstruct what happened.</span><video src="case-media/engine/vehicle-history.webm" autoplay muted loop playsinline preload="metadata" aria-label="Trip timeline demo"></video></li>
+              <li><strong>Tamper &amp; Jammer Alerts</strong><span>After a customer call, I added alerts for physical device removal and signal jamming.</span><video src="case-media/engine/notifications-video.webm" autoplay muted loop playsinline preload="metadata" aria-label="Tamper and jammer alerts demo"></video></li>
             </ul>
           </div>
         </section>
@@ -119,7 +128,7 @@
           <p class="section-label">Impact</p>
           <div class="case-copy">
             <h2>Added $8M to Motive’s ARR.</h2>
-            <p>Engine Immobilizer opened the Mexican market for Motive and added $8M to ARR. Customers reported lower insurance premiums and a measurable drop in cargo theft.</p>
+            <p>The product gave Sales the last core capability they needed for Mexico. It also lowered insurance premiums for fleets and helped reduce cargo theft. This was Motive’s first third-party hardware product and my first project at the company.</p>
           </div>
         </section>
 

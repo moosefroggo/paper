@@ -82,6 +82,9 @@
     "generator": "Sketchfab-12.68.0",
     "version": "2.0"
   },
+  "extensionsUsed": [
+    "KHR_materials_specular"
+  ],
   "bufferViews": [
     {
       "buffer": 0,
@@ -131,6 +134,11 @@
   "materials": [
     {
       "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.0
+        }
+      },
       "name": "Material",
       "pbrMetallicRoughness": {
         "baseColorTexture": {

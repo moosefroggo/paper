@@ -16,41 +16,41 @@
     <main class="case-study">
       <section class="case-hero">
         <h1>Workflows</h1>
-        <p class="summary">A unified workflow management tool that lets you track PRDs, tasks, projects, and designs without leaving the platform.</p>
+        <p class="summary">One place for engineering teams to write specs, assign work, request reviews, and track projects.</p>
         <video class="case-hero-media" src="case-media/workflows/hero.mp4" autoplay muted loop playsinline preload="auto" aria-label="Workflows product demo"></video>
       </section>
 
       <section class="case-meta" aria-label="Project details">
-        <div class="meta-item"><p class="meta-label">Role</p><p>Product Design</p></div>
+        <div class="meta-item"><p class="meta-label">Role</p><p>Product Designer</p></div>
         <div class="meta-item"><p class="meta-label">Duration</p><p>8 months</p></div>
-        <div class="meta-item"><p class="meta-label">Team</p><p>Design, PM, Engineering</p></div>
+        <div class="meta-item"><p class="meta-label">Team</p><p>CTO, 3 Product Managers, VP of Sales</p></div>
       </section>
 
       <div class="case-content">
         <section class="case-section">
           <p class="section-label">The problem</p>
           <div class="case-copy">
-            <h2>The team grew from 50 to more than 600 people.</h2>
-            <p>As our team at Educative scaled from 50 people to over 600, a centralized repository of projects, communication, and documentation became necessary.</p>
-            <p>The existing tools solved separate parts of the problem, which meant constant context switching and upkeep. We needed one place for multiple teams, so we started building Workflows.</p>
+            <h2>The scalability problem.</h2>
+            <p>As our team at Educative scaled from 50 people to more than 600, a centralized repository for projects, communication, and documentation became necessary. The existing tools solved separate parts of the problem, requiring a lot of context switching and maintenance.</p>
+            <p>To solve this for multiple personas across the company, we set out to build Workflows.</p>
           </div>
         </section>
 
         <section class="case-section">
           <p class="section-label">My role</p>
           <div class="case-copy">
-            <h2>I worked across design, product, engineering, and sales.</h2>
+            <h2>The Manager + IC Hybrid.</h2>
             <p>By this point, I had been at Educative for over two years. It was an ambitious product that our leadership was heavily focused on, and I worked directly with sales, engineering, and product leadership on the end-to-end process.</p>
-            <p>Besides this, I was also involved in hiring and developing an outcome-focused team of designers and illustrators.</p>
+            <p>I was also involved in hiring and developing an outcome-focused team of designers and illustrators.</p>
           </div>
         </section>
 
         <section class="case-section">
           <p class="section-label">Research</p>
           <div class="case-copy">
-            <h2>I spoke with 31 people about how they worked.</h2>
-            <p>I spoke with 31 people, including 18 Engineering Managers and 13 Software Engineers, recruited through my LinkedIn network.</p>
-            <p>Since this was an exploratory phase, I focused on how they used existing work-management tools, what they liked, what they disliked, and where the gaps existed.</p>
+            <h2>Talking to the demographic.</h2>
+            <p>I spoke to 31 people, including 18 Engineering Managers and 13 Software Engineers, sourced through my LinkedIn network.</p>
+            <p>This was still exploratory, so I focused on how they used existing work-management tools, what they liked, what they did not, and where gaps existed. We found competitors across two main areas: documentation and project management.</p>
           </div>
         </section>
 
@@ -58,11 +58,20 @@
           <p class="section-label">Key insights</p>
           <div class="case-copy">
             <ul class="insight-list">
-              <li><strong>“I can never figure out project progress.”</strong><span>Engineering Managers have tight schedules and don’t want to search for documents or projects.</span></li>
-              <li><strong>“Design, PM, and dev docs get lost.”</strong><span>A person has to search four separate platforms depending on what they are looking for: Slite.com for product, Monday.com for task tracking, GitHub for PR reviews, and Figma for design.</span></li>
-              <li><strong>“Signoffs become blockers and I have to remind people via Slack.”</strong><span>People forget things, and PMs constantly remind via messaging apps.</span></li>
-              <li><strong>“Discussions on technical docs are difficult to resolve.”</strong><span>Reviewers treated communication on the pages as low priority because they used Monday.com to manage the work.</span></li>
+              <li><strong>“I can never figure out project progress.”</strong><span>Engineering Managers did not want to spend their time searching for documents or projects. One interviewee described Jira as so open that anyone could create anything anywhere, and it became bloated over time.</span></li>
+              <li><strong>“I don’t want to use two different tools to manage my work.”</strong><span>Twenty-four of the 31 people I spoke to used Jira and Confluence as a pair. At Educative, PMs split work between Monday and Slite, then manually linked records and updated both statuses.</span></li>
+              <li><strong>“Signoffs become blockers and I have to remind people via Slack.”</strong><span>Even when people wrote things down, they did not always reopen their notes. Product Managers ended up reminding colleagues in Slack, causing avoidable delays.</span></li>
+              <li><strong>“Discussions on technical docs are difficult to resolve.”</strong><span>Implementation discussions could stay in limbo and prevent approval. Some PMs pushed documents through without signoff because technical reviews took too long.</span></li>
             </ul>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <p class="section-label">Experimentation</p>
+          <div class="case-copy">
+            <h2>I built a functional wireframe over a weekend.</h2>
+            <p>After synthesizing the findings and settling on the MVP features, I took a weekend to prototype a fully functional low-fidelity wireframe containing the core experience.</p>
+            <p>It covered three touchpoints: Projects Home, Project Details, and the Document page. The first round of feedback showed that people needed clearer cues for where their attention was required, which tasks were due, and what they still needed to resolve.</p>
           </div>
         </section>
 
@@ -70,10 +79,10 @@
           <p class="section-label">Final designs</p>
           <div class="case-copy">
             <ul class="feature-list">
-              <li><strong>Task Manager</strong><span>A complete end-to-end task manager. Tasks are associated with projects and documents and can be assigned to anyone.</span><video src="case-media/workflows/task-page.webm" autoplay muted loop playsinline preload="metadata" aria-label="Task Manager demo"></video></li>
-              <li><strong>Review Manager</strong><span>Request reviews on documents from any team member, with full review flow, status tracking, and resolution.</span><video src="case-media/workflows/reviews-video.webm" autoplay muted loop playsinline preload="metadata" aria-label="Review Manager demo"></video></li>
-              <li><strong>Project Manager</strong><span>A project contains several tasks and documents. It can have a due date and multiple collaborators.</span><video src="case-media/workflows/project-video.webm" autoplay muted loop playsinline preload="metadata" aria-label="Project Manager demo"></video></li>
-              <li><strong>Document Editor</strong><span>A live multiplayer document editor with auto-save. Tasks and reviews are embedded in-document with clear status.</span><video src="case-media/workflows/doc-video.webm" autoplay muted loop playsinline preload="metadata" aria-label="Document Editor demo"></video></li>
+              <li><strong>Task Manager</strong><span>I built a complete end-to-end task manager from scratch. Tasks were associated with projects and documents and could be assigned to anyone.</span><video src="case-media/workflows/task-page.webm" autoplay muted loop playsinline preload="metadata" aria-label="Task Manager demo"></video></li>
+              <li><strong>Review Manager</strong><span>People could request reviews on their documents and track the process from request to resolution.</span><video src="case-media/workflows/reviews-video.webm" autoplay muted loop playsinline preload="metadata" aria-label="Review Manager demo"></video></li>
+              <li><strong>Project Manager</strong><span>Projects grouped tasks and documents with due dates and collaborators.</span><video src="case-media/workflows/project-video.webm" autoplay muted loop playsinline preload="metadata" aria-label="Project Manager demo"></video></li>
+              <li><strong>Document Editor</strong><span>This was the page where users spent most of their time. Tasks and reviews were part of the document, with states ranging from Not Started to Done.</span><video src="case-media/workflows/doc-video.webm" autoplay muted loop playsinline preload="metadata" aria-label="Document Editor demo"></video></li>
             </ul>
           </div>
         </section>
@@ -82,7 +91,7 @@
           <p class="section-label">Outcome</p>
           <div class="case-copy">
             <h2>The work helped land a $100K deal.</h2>
-            <p>Workflows brought projects, tasks, reviews, and documentation into one place.</p>
+            <p>Sales used a prototype built from these designs during the enterprise pitch.</p>
           </div>
         </section>
 
