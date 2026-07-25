@@ -4,12 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Mustafa, independent designer and developer." />
+    <meta property="og:title" content="Hello, I am Mustafa" />
+    <meta property="og:description" content="Mustafa, independent designer and developer." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mstf.work/" />
+    <meta property="og:image" content="https://mstf.work/social-cover-assets/social-cover.png" />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1260" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hello, I am Mustafa" />
+    <meta name="twitter:description" content="Mustafa, independent designer and developer." />
+    <meta name="twitter:image" content="https://mstf.work/social-cover-assets/social-cover.png" />
     <title>Mustafa Portfolio</title>
     <link rel="stylesheet" href="styles.css?v=20260725-7" />
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </head>
   <body>
     <main class="hero-grid">
+      <svg class="grid-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M50 0 C49.82 18 50.16 34 49.96 50 C49.8 67 50.2 84 50 100" />
+        <path d="M0 50 C18 49.78 34 50.18 50 49.96 C67 49.8 84 50.2 100 50" />
+      </svg>
+
       <section class="cell project-list projects-cell" aria-labelledby="projects-title">
         <h2 class="cell-title" id="projects-title">Vibe code experiments</h2>
         <div class="project-items">
@@ -59,10 +75,17 @@
         <h1 id="intro-title">Hello, I am <span class="mustafa-reveal"><button class="photo-trigger" type="button">Mustafa</button><span class="photo-arc" aria-hidden="true"><img class="gallery-photo gallery-photo-one" src="portfolio-photos/Grad.jpeg" alt="" /><img class="gallery-photo gallery-photo-two" src="portfolio-photos/guitar.JPG" alt="" /><img class="gallery-photo gallery-photo-three" src="portfolio-photos/Hike.jpg" alt="" /></span></span></h1>
         <div class="hero-copy">
           <p class="hero-body">My primary driver in life is finding purpose in things I do. I’ve been on the internet since 2008, and I am chronically online. The benefit is that I am always ahead of the curve, the downside is my side projects don’t pay. I derive meaning from my work, which is why I jump right into new challenges, kind of like an adrenaline junkie who goes to the trenches for the love of game.</p>
-          <nav class="profile-links" aria-label="Mustafa's profiles and resume">
+          <nav class="profile-links" aria-label="Mustafa's profiles, resume, and email">
             <a href="https://www.linkedin.com/in/mustafa-ali-akbar-a5195387/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
             <a href="https://github.com/moosefroggo" target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a href="https://drive.google.com/file/d/1lFeiToMUnMRtD6pC40q_PyZW01hf9Kus/view" target="_blank" rel="noreferrer">Resume ↗</a>
+            <a href="resume.pdf" target="_blank" rel="noreferrer">Resume ↓</a>
+            <button class="copy-email" type="button" data-email="hello@mstf.work" aria-label="Copy hello@mstf.work to clipboard">
+              <span class="copy-email-label">hello@mstf.work</span>
+              <svg class="copy-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <rect x="5.5" y="2.5" width="8" height="9" rx="1.5" />
+                <path d="M10.5 13.5h-8v-9" />
+              </svg>
+            </button>
           </nav>
         </div>
       </section>
@@ -88,6 +111,30 @@
           cursorHint.classList.add('is-visible')
         })
         link.addEventListener('mouseleave', () => cursorHint.classList.remove('is-visible'))
+      })
+
+      const copyEmail = document.querySelector('.copy-email')
+      const copyEmailLabel = copyEmail.querySelector('.copy-email-label')
+      const email = copyEmail.dataset.email
+
+      copyEmail.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(email)
+        } catch {
+          const input = document.createElement('textarea')
+          input.value = email
+          input.style.position = 'fixed'
+          input.style.opacity = '0'
+          document.body.appendChild(input)
+          input.select()
+          document.execCommand('copy')
+          input.remove()
+        }
+
+        copyEmailLabel.textContent = 'Copied!'
+        window.setTimeout(() => {
+          copyEmailLabel.textContent = email
+        }, 1400)
       })
 
       window.addEventListener('mousemove', (event) => {
