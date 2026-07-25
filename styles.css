@@ -57,34 +57,24 @@ a:focus-visible {
   overflow: hidden;
 }
 
-.hero-grid::before,
-.hero-grid::after {
-  position: fixed;
-  z-index: 2;
-  background: var(--line);
-  content: "";
-  pointer-events: none;
-}
-
-.hero-grid::before {
-  top: 0;
-  bottom: 0;
-  left: 50vw;
-  width: 1px;
-}
-
-.hero-grid::after {
-  top: 50svh;
-  right: 0;
-  left: 0;
-  height: 1px;
-}
-
 .cell {
   min-width: 0;
   min-height: 0;
   overflow: hidden;
   padding: clamp(28px, 4vh, 48px) clamp(28px, 3vw, 44px);
+}
+
+.projects-cell {
+  grid-column: 1;
+  grid-row: 1;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.case-studies-cell {
+  grid-column: 2;
+  grid-row: 1;
+  border-bottom: 1px solid var(--line);
 }
 
 .project-list {
@@ -170,10 +160,14 @@ a:focus-visible {
 
 .statement {
   position: relative;
+  grid-column: 1;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 24px;
+  gap: clamp(14px, 2.2vh, 18px);
+  overflow: visible;
+  border-right: 1px solid var(--line);
 }
 
 .statement h1,
@@ -186,7 +180,7 @@ h1 {
   max-width: 650px;
   margin: 0;
   font-family: "Anormal Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: clamp(2.6rem, min(4vw, 8svh), 6rem);
+  font-size: clamp(3rem, min(5.3vw, 9.5svh), 7.5rem);
   font-weight: 500;
   letter-spacing: -0.055em;
   line-height: 1;
@@ -205,9 +199,111 @@ h1 {
   gap: 8px;
 }
 
+.mustafa-reveal {
+  position: relative;
+  display: inline-block;
+}
+
+.photo-arc {
+  --arc-shift-x: -18%;
+
+  position: absolute;
+  z-index: 6;
+  bottom: calc(100% - 4px);
+  left: 74%;
+  width: clamp(360px, 36vw, 480px);
+  height: clamp(280px, 38vh, 340px);
+  pointer-events: none;
+  transform: translateX(var(--arc-shift-x));
+}
+
+.photo-trigger {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.1em;
+  cursor: pointer;
+}
+
+.photo-trigger:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.gallery-photo {
+  --photo-delay: 0ms;
+  --photo-origin: center bottom;
+  --photo-rotation: 0deg;
+  --photo-shift-x: 0;
+  --photo-shift-y: 64px;
+
+  position: absolute;
+  display: block;
+  width: 30%;
+  aspect-ratio: 4 / 5;
+  border: 3px solid var(--paper);
+  border-radius: 6px;
+  object-fit: cover;
+  opacity: 0;
+  box-shadow: 0 14px 30px rgb(29 29 27 / 16%);
+  transform: translate(var(--photo-shift-x), var(--photo-shift-y)) scale(0.78) rotate(var(--photo-rotation));
+  transform-origin: var(--photo-origin);
+  transition:
+    opacity 180ms ease,
+    transform 360ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.mustafa-reveal:hover .gallery-photo,
+.mustafa-reveal:focus-within .gallery-photo {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(var(--photo-rotation));
+  transition-delay: var(--photo-delay);
+}
+
+.gallery-photo-one {
+  --photo-delay: 0ms;
+  --photo-rotation: -12deg;
+  --photo-shift-x: -92px;
+  --photo-shift-y: 82px;
+
+  top: 26%;
+  left: 0;
+}
+
+.gallery-photo-two {
+  --photo-delay: 70ms;
+  --photo-rotation: 2deg;
+  --photo-shift-x: -64px;
+  --photo-shift-y: 68px;
+
+  top: 34%;
+  left: 34%;
+  z-index: 2;
+}
+
+.gallery-photo-three {
+  --photo-delay: 140ms;
+  --photo-origin: center top;
+  --photo-rotation: 12deg;
+  --photo-shift-x: -42px;
+  --photo-shift-y: -44px;
+
+  top: 110%;
+  right: 35%;
+  z-index: 3;
+}
+
 .manifesto {
   position: relative;
   z-index: 4;
+  grid-column: 2;
+  grid-row: 2;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   grid-template-rows: 1fr auto;
@@ -254,7 +350,7 @@ h1 {
 
 .hero-body,
 .manifesto-body {
-  font-size: clamp(13px, min(1.05vw, 2.6svh), 14px);
+  font-size: clamp(14px, min(1.05vw, 2.6svh), 16px);
   line-height: 1.5;
 }
 
@@ -335,8 +431,27 @@ h1 {
     border-bottom: 1px solid var(--line);
   }
 
+  .cell.statement {
+    overflow: visible;
+  }
+
   .cell:last-child {
     border-bottom: 0;
+  }
+
+  .projects-cell,
+  .case-studies-cell,
+  .statement {
+    border-right: 0;
+  }
+
+  .photo-arc {
+    --arc-shift-x: 0;
+
+    right: -36px;
+    left: auto;
+    width: min(86vw, 360px);
+    height: min(74vw, 320px);
   }
 
   .project-row {
@@ -372,7 +487,7 @@ h1 {
 
   h1 {
     margin-top: 0;
-    font-size: clamp(2.35rem, 8.5vw, 4rem);
+    font-size: clamp(2.75rem, 10.5vw, 4.75rem);
   }
 
 }
@@ -439,7 +554,7 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(2.6rem, min(6vw, 8svh), 9rem);
+    font-size: clamp(3rem, min(6.5vw, 10svh), 10rem);
   }
 
   .cell-title {
@@ -450,8 +565,9 @@ h1 {
     font-size: clamp(0.76rem, min(1.2vw, 2.5svh), 1.2rem);
   }
 
+  .hero-body,
   .manifesto-body {
-    font-size: clamp(0.9rem, min(1.2vw, 3svh), 1.15rem);
+    font-size: clamp(0.875rem, min(1.2vw, 3svh), 1.15rem);
   }
 }
 
