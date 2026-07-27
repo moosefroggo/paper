@@ -8,7 +8,7 @@
 
 :root {
   color-scheme: light;
-  --paper: #f7f7f4;
+  --paper: #f7f8fa;
   --ink: #1d1d1b;
   --link: #4f504b;
   --muted: #777873;
@@ -91,10 +91,10 @@ a:focus-visible {
 .case-studies-cell {
   grid-column: 2;
   grid-row: 1;
-  gap: calc(clamp(18px, 3.2vh, 32px) + 8px);
 }
 
 .project-list {
+  --project-item-gap: clamp(12px, 2vh, 20px);
   --project-row-padding: 7px;
 
   display: grid;
@@ -108,14 +108,14 @@ a:focus-visible {
 }
 
 .project-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--project-item-gap);
   width: 100%;
 }
 
 .project-list > .project-items {
-  display: flex;
   min-height: 0;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .project-stack {
@@ -125,12 +125,6 @@ a:focus-visible {
   justify-content: space-between;
   width: 100%;
   min-height: 0;
-}
-
-.project-stack > .project-items {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(12px, 2vh, 20px);
 }
 
 .bottom-row {
@@ -173,14 +167,6 @@ a:focus-visible {
   font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1.2;
-}
-
-.title-experience {
-  color: var(--muted);
-  font-size: clamp(0.75rem, 0.65em, 1rem);
-  font-weight: 400;
-  letter-spacing: 0;
-  white-space: nowrap;
 }
 
 .statement {
@@ -575,14 +561,11 @@ h1 {
   }
 
   .project-list {
+    --project-item-gap: 10px;
     --project-row-padding: 4px;
 
     gap: 18px;
     padding-bottom: 8px;
-  }
-
-  .project-list > .project-items {
-    gap: 10px;
   }
 
   .project-stack {
