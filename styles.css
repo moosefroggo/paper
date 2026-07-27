@@ -175,6 +175,14 @@ a:focus-visible {
   line-height: 1.2;
 }
 
+.title-experience {
+  color: var(--muted);
+  font-size: clamp(0.75rem, 0.65em, 1rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
 .statement {
   position: relative;
   grid-column: 1;
