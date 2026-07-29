@@ -17,7 +17,7 @@
     <meta name="twitter:image" content="https://mstf.work/social-cover-assets/social-cover.png" />
     <title>Mustafa Portfolio</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260728-2" />
+    <link rel="stylesheet" href="styles.css?v=20260729-18" />
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </head>
   <body>
@@ -51,9 +51,10 @@
             </a>
           </div>
           <div class="bottom-row">
-            <a class="pitch-link bottom-link" href="https://github.com/moosefroggo" target="_blank" rel="noreferrer">View my GitHub <span aria-hidden="true">↗</span></a>
+            <a class="pitch-link bottom-link" href="https://github.com/moosefroggo" target="_blank" rel="noreferrer" data-cat-trigger>View my GitHub <span aria-hidden="true">↗</span></a>
           </div>
         </div>
+        <canvas class="divider-cat" aria-hidden="true"></canvas>
       </section>
 
       <section class="cell project-list case-studies-cell" aria-labelledby="case-studies-title">
@@ -80,8 +81,8 @@
       <section class="cell statement" aria-labelledby="intro-title">
         <h1 id="intro-title">Hello, I am <span class="mustafa-reveal"><button class="photo-trigger" type="button">Mustafa</button><span class="photo-arc" aria-hidden="true"><img class="gallery-photo gallery-photo-one" src="portfolio-photos/Grad.jpeg" alt="" /><img class="gallery-photo gallery-photo-two" src="portfolio-photos/guitar.JPG" alt="" /><img class="gallery-photo gallery-photo-three" src="portfolio-photos/Hike.jpg" alt="" /></span></span></h1>
         <div class="hero-copy">
-          <p class="role-line">Product designer who codes.</p>
-          <p class="hero-body">My primary driver in life is finding purpose in things I do. I’ve been on the internet since 2008, and I am chronically online (aka cracked). The benefit is that I am always ahead of the curve, the downside is my side projects don’t pay. I derive meaning from my work, which is why I jump right into new challenges, kind of like an adrenaline junkie who goes to the trenches just for the love of the game.</p>
+          <p class="role-line">Product designer who codes. (Opus and Sol agree)</p>
+          <p class="hero-body">My primary driver in life is finding purpose in things I do. I’ve been on the internet since 2008, and I am chronically online (aka cracked). The benefit is that I am always ahead of the curve, the downside is I have over a dozen unfinished projects. I derive meaning from my work, which is why I jump right into new challenges, kind of like an adrenaline junkie who goes to the trenches just for the love of the game.</p>
           <nav class="profile-links" aria-label="Mustafa's profiles, resume, and email">
             <a href="https://www.linkedin.com/in/mustafa-ali-akbar-a5195387/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
             <a href="https://github.com/moosefroggo" target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -111,6 +112,7 @@
     <script>
       const cursorHint = document.querySelector('.cursor-hint')
       const projectLinks = document.querySelectorAll('.project-row, .pitch-link')
+      const humanWrittenParagraphs = document.querySelectorAll('.hero-body, .manifesto-body')
 
       projectLinks.forEach((link) => {
         link.addEventListener('mouseenter', () => {
@@ -118,6 +120,14 @@
           cursorHint.classList.add('is-visible')
         })
         link.addEventListener('mouseleave', () => cursorHint.classList.remove('is-visible'))
+      })
+
+      humanWrittenParagraphs.forEach((paragraph) => {
+        paragraph.addEventListener('mouseenter', () => {
+          cursorHint.textContent = 'fun fact: human hands wrote this'
+          cursorHint.classList.add('is-visible')
+        })
+        paragraph.addEventListener('mouseleave', () => cursorHint.classList.remove('is-visible'))
       })
 
       const copyEmail = document.querySelector('.copy-email')
@@ -165,5 +175,6 @@
 
       requestAnimationFrame(rotateThinker)
     </script>
+    <script src="assets/js/divider-cat.js?v=20260729-27"></script>
   </body>
 </html>

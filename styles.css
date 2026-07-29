@@ -84,8 +84,28 @@ a:focus-visible {
 }
 
 .projects-cell {
+  position: relative;
+  isolation: isolate;
   grid-column: 1;
   grid-row: 1;
+}
+
+.projects-cell .cell-title,
+.projects-cell .project-stack {
+  position: relative;
+  z-index: 2;
+}
+
+.divider-cat {
+  position: absolute;
+  z-index: 1;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: clamp(78px, 7.5vw, 108px);
+  opacity: 0.64;
+  pointer-events: none;
+  transition: opacity 180ms ease;
 }
 
 .case-studies-cell {
@@ -533,6 +553,15 @@ h1 {
   .case-studies-cell,
   .statement {
     border-right: 0;
+  }
+
+  .divider-cat {
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    visibility: hidden;
+    opacity: 0;
   }
 
   .photo-arc {
