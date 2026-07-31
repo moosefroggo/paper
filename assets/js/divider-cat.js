@@ -97,6 +97,16 @@
       this.blinkDuration = 0.16
     }
 
+    playIntro() {
+      this.blinkElapsed = 0
+      this.blinkDuration = 0.22
+      this.headIdleElapsed = 0
+      this.headIdleDuration = 0
+      this.headIdleDirection = -1
+      this.headIdleAmplitude = 0.04
+      this.nextHeadIdle = 0.06
+    }
+
     frame(time) {
       const delta = Math.min((time - this.lastFrame) / 1000, 0.05)
       this.lastFrame = time
@@ -631,6 +641,57 @@
   }
 
   const cat = new LoafCat(canvas)
+  const root = document.documentElement
+  const forceIntro = new URLSearchParams(window.location.search).has('preview')
+  let introSeen = false
+
+  try {
+    introSeen = sessionStorage.getItem('portfolio-intro-seen') === 'true'
+  } catch {
+    introSeen = false
+  }
+
+  const shouldPlayIntro = (
+    !reduceMotion
+    && window.innerWidth > 760
+    && (forceIntro || !introSeen)
+  )
+
+  if (shouldPlayIntro) {
+    try {
+      sessionStorage.setItem('portfolio-intro-seen', 'true')
+    } catch {
+      // The intro still works when storage is unavailable.
+    }
+
+    requestAnimationFrame(() => {
+      root.classList.add('intro-cat-visible')
+
+      window.setTimeout(() => cat.playIntro(), 120)
+
+      const wait = (duration) => new Promise((resolve) => {
+        window.setTimeout(resolve, duration)
+      })
+      const fontsReady = document.fonts?.ready || Promise.resolve()
+
+      Promise.all([
+        wait(280),
+        Promise.race([fontsReady, wait(520)]),
+      ]).then(() => {
+        root.classList.add('intro-reveal')
+        root.classList.remove('intro-pending', 'intro-cat-visible')
+        document.dispatchEvent(new Event('portfolio:intro-reveal'))
+
+        window.setTimeout(() => {
+          root.classList.remove('intro-reveal')
+        }, 1200)
+      })
+    })
+  } else {
+    root.classList.remove('intro-pending')
+    document.dispatchEvent(new Event('portfolio:intro-reveal'))
+  }
+
   trigger.addEventListener('mouseenter', () => cat.startLoaf())
   trigger.addEventListener('focus', () => cat.startLoaf())
 })()
