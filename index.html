@@ -17,7 +17,14 @@
     <meta name="twitter:image" content="https://mstf.work/social-cover-assets/social-cover.png" />
     <title>Mustafa Portfolio</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260729-18" />
+    <link rel="preload" href="fonts/AnormalSans-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      document.documentElement.classList.add('intro-pending')
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('intro-pending', 'intro-cat-visible')
+      }, 1600)
+    </script>
+    <link rel="stylesheet" href="styles.css?v=20260730-22" />
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </head>
   <body>
@@ -159,20 +166,64 @@
         cursorHint.style.top = `${Math.max(cursorHint.offsetHeight / 2 + 12, top)}px`
       })
 
-      const thinker = document.querySelector('.manifesto-model')
-      let thinkerRotation = 0
-      let lastFrame = performance.now()
-
-      function rotateThinker(now) {
-        const delta = Math.min((now - lastFrame) / 1000, 0.05)
-        thinkerRotation = (thinkerRotation + delta * 24) % 360
-        thinker.orientation = `0deg 0deg ${thinkerRotation}deg`
-        lastFrame = now
-        requestAnimationFrame(rotateThinker)
-      }
-
-      requestAnimationFrame(rotateThinker)
     </script>
-    <script src="assets/js/divider-cat.js?v=20260729-27"></script>
+    <script src="assets/js/divider-cat.js?v=20260730-30"></script>
+    <script>
+      const thinker = document.querySelector('.manifesto-model')
+      const reduceEmojiMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+      if (thinker && !reduceEmojiMotion) {
+        const root = document.documentElement
+        const defaultOrbit = '0deg 75deg 5m'
+        const startingTurn = -12
+        let introReady = !root.classList.contains('intro-pending')
+        let modelReady = false
+        let hasSettled = false
+
+        thinker.setAttribute('camera-orbit', `${startingTurn}deg 75deg 5m`)
+
+        const settleThinker = () => {
+          if (!introReady || !modelReady || hasSettled) return
+
+          hasSettled = true
+          const startTime = performance.now()
+          const duration = 780
+
+          const settleFrame = (now) => {
+            const progress = Math.min((now - startTime) / duration, 1)
+            const eased = 1 - Math.pow(1 - progress, 3)
+            const turn = startingTurn * (1 - eased)
+
+            thinker.setAttribute('camera-orbit', `${turn.toFixed(3)}deg 75deg 5m`)
+
+            if (progress < 1) {
+              requestAnimationFrame(settleFrame)
+            } else {
+              thinker.setAttribute('camera-orbit', defaultOrbit)
+            }
+          }
+
+          requestAnimationFrame(settleFrame)
+        }
+
+        document.addEventListener('portfolio:intro-reveal', () => {
+          introReady = true
+          settleThinker()
+        }, { once: true })
+
+        customElements.whenDefined('model-viewer').then(() => {
+          if (thinker.loaded) {
+            modelReady = true
+            settleThinker()
+            return
+          }
+
+          thinker.addEventListener('load', () => {
+            modelReady = true
+            settleThinker()
+          }, { once: true })
+        })
+      }
+    </script>
   </body>
 </html>
