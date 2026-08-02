@@ -24,7 +24,7 @@
         document.documentElement.classList.remove('intro-pending', 'intro-cat-visible')
       }, 1600)
     </script>
-    <link rel="stylesheet" href="styles.css?v=20260730-22" />
+    <link rel="stylesheet" href="styles.css?v=20260802-28" />
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </head>
   <body>
@@ -86,6 +86,11 @@
 
       <section class="cell statement" aria-labelledby="intro-title">
         <h1 id="intro-title">Hello, I am <span class="mustafa-reveal"><button class="photo-trigger" type="button">Mustafa</button><span class="photo-arc" aria-hidden="true"><img class="gallery-photo gallery-photo-one" src="portfolio-photos/Grad.jpeg" alt="" /><img class="gallery-photo gallery-photo-two" src="portfolio-photos/guitar.JPG" alt="" /><img class="gallery-photo gallery-photo-three" src="portfolio-photos/Hike.jpg" alt="" /></span></span></h1>
+        <div class="mobile-photo-rail" aria-label="Photos of Mustafa">
+          <span class="mobile-photo-frame mobile-photo-frame-zoomed"><img src="portfolio-photos/Grad.jpeg" alt="Mustafa at graduation" /></span>
+          <span class="mobile-photo-frame"><img src="portfolio-photos/guitar.JPG" alt="Mustafa playing guitar" /></span>
+          <span class="mobile-photo-frame mobile-photo-frame-zoomed"><img src="portfolio-photos/Hike.jpg" alt="Mustafa hiking" /></span>
+        </div>
         <div class="hero-copy">
           <p class="hero-body">My primary driver in life is finding purpose in things I do. I’ve been on the internet since 2008, and I am chronically online (aka cracked). The benefit is that I am always ahead of the curve, the downside is I have over a dozen unfinished projects. I derive meaning from my work, which is why I jump right into new challenges, kind of like an adrenaline junkie who goes to the trenches just for the love of the game.</p>
           <nav class="profile-links" aria-label="Mustafa's profiles, resume, and email">
@@ -111,6 +116,19 @@
         </div>
       </section>
     </main>
+
+    <footer class="mobile-footer">
+      <div class="mobile-footer-heading">
+        <span class="mobile-footer-name">Mustafa</span>
+        <a href="#intro-title">Back to top ↑</a>
+      </div>
+      <nav class="mobile-footer-links" aria-label="Footer links">
+        <a href="https://www.linkedin.com/in/mustafa-ali-akbar-a5195387/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="https://github.com/moosefroggo" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="resume.pdf" target="_blank" rel="noreferrer">Resume ↓</a>
+        <a href="mailto:hello@mstf.work">Email ↗</a>
+      </nav>
+    </footer>
 
     <div class="cursor-hint" aria-hidden="true">Opens in a new tab</div>
 
