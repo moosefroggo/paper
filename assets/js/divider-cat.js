@@ -55,6 +55,7 @@
       this.affectionSpawnElapsed = 0
       this.affectionSpawnInterval = 0.2
       this.affectionSequence = 0
+      this.frameInterval = 1000 / 30
       this.lastFrame = performance.now()
 
       this.resize()
@@ -78,7 +79,7 @@
       const bounds = this.canvas.getBoundingClientRect()
       if (!bounds.width || !bounds.height) return
 
-      this.pixelRatio = Math.min(window.devicePixelRatio || 1, 2)
+      this.pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5)
       this.width = bounds.width
       this.height = bounds.height
       this.scale = this.width <= 760 ? 0.675 : 0.81
@@ -108,7 +109,20 @@
     }
 
     frame(time) {
-      const delta = Math.min((time - this.lastFrame) / 1000, 0.05)
+      if (document.hidden) {
+        this.lastFrame = time
+        requestAnimationFrame((nextTime) => this.frame(nextTime))
+        return
+      }
+
+      const elapsed = time - this.lastFrame
+
+      if (elapsed < this.frameInterval) {
+        requestAnimationFrame((nextTime) => this.frame(nextTime))
+        return
+      }
+
+      const delta = Math.min(elapsed / 1000, 0.05)
       this.lastFrame = time
       this.updateBlink(delta)
       this.updateTailFlick(delta)
@@ -675,8 +689,8 @@
       const fontsReady = document.fonts?.ready || Promise.resolve()
 
       Promise.all([
-        wait(280),
-        Promise.race([fontsReady, wait(520)]),
+        wait(840),
+        Promise.race([fontsReady, wait(1000)]),
       ]).then(() => {
         root.classList.add('intro-reveal')
         root.classList.remove('intro-pending', 'intro-cat-visible')
@@ -684,7 +698,7 @@
 
         window.setTimeout(() => {
           root.classList.remove('intro-reveal')
-        }, 1200)
+        }, 1600)
       })
     })
   } else {

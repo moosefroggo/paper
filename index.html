@@ -22,16 +22,16 @@
       document.documentElement.classList.add('intro-pending')
       window.setTimeout(() => {
         document.documentElement.classList.remove('intro-pending', 'intro-cat-visible')
-      }, 1600)
+      }, 2200)
     </script>
-    <link rel="stylesheet" href="styles.css?v=20260802-28" />
+    <link rel="stylesheet" href="styles.css?v=20260805-36" />
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </head>
   <body>
     <main class="hero-grid">
       <svg class="grid-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M50 0 C49.82 18 50.16 34 49.96 50 C49.8 67 50.2 84 50 100" />
-        <path d="M0 50 C18 49.78 34 50.18 50 49.96 C67 49.8 84 50.2 100 50" />
+        <path class="grid-line-vertical" pathLength="1" d="M50 0 C49.82 18 50.16 34 49.96 50 C49.8 67 50.2 84 50 100" />
+        <path class="grid-line-horizontal" pathLength="1" d="M0 50 C18 49.78 34 50.18 50 49.96 C67 49.8 84 50.2 100 50" />
       </svg>
 
       <section class="cell project-list projects-cell" aria-labelledby="projects-title">
@@ -185,7 +185,7 @@
       })
 
     </script>
-    <script src="assets/js/divider-cat.js?v=20260730-30"></script>
+    <script src="assets/js/divider-cat.js?v=20260805-34"></script>
     <script>
       const thinker = document.querySelector('.manifesto-model')
       const reduceEmojiMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -197,6 +197,7 @@
         let introReady = !root.classList.contains('intro-pending')
         let modelReady = false
         let hasSettled = false
+        let settleTimer = 0
 
         thinker.setAttribute('camera-orbit', `${startingTurn}deg 75deg 5m`)
 
@@ -224,21 +225,30 @@
           requestAnimationFrame(settleFrame)
         }
 
+        const queueThinkerSettle = () => {
+          if (!introReady || !modelReady || hasSettled || settleTimer) return
+
+          settleTimer = window.setTimeout(() => {
+            settleTimer = 0
+            settleThinker()
+          }, 900)
+        }
+
         document.addEventListener('portfolio:intro-reveal', () => {
           introReady = true
-          settleThinker()
+          queueThinkerSettle()
         }, { once: true })
 
         customElements.whenDefined('model-viewer').then(() => {
           if (thinker.loaded) {
             modelReady = true
-            settleThinker()
+            queueThinkerSettle()
             return
           }
 
           thinker.addEventListener('load', () => {
             modelReady = true
-            settleThinker()
+            queueThinkerSettle()
           }, { once: true })
         })
       }
