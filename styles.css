@@ -14,6 +14,7 @@
   --muted: #777873;
   --line: #dcdcd5;
   --accent: #a7b6a0;
+  --intro-ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -55,6 +56,35 @@ a:focus-visible {
   min-height: 0;
   max-height: 100svh;
   overflow: hidden;
+}
+
+.hero-grid::before,
+.hero-grid::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  display: block;
+  background: var(--line);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-grid::before {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: center top;
+}
+
+.hero-grid::after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left center;
 }
 
 .grid-lines {
@@ -110,15 +140,23 @@ a:focus-visible {
     transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes portfolio-intro-reveal {
+@keyframes portfolio-grid-draw-horizontal {
   from {
-    opacity: 0;
-    transform: translate3d(0, 12px, 0);
+    transform: scaleX(0);
   }
 
   to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: scaleX(1);
+  }
+}
+
+@keyframes portfolio-grid-draw-vertical {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
   }
 }
 
@@ -132,7 +170,39 @@ a:focus-visible {
   }
 }
 
+@keyframes portfolio-intro-settle {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0) scale(0.992);
+  }
+
+  55% {
+    opacity: 0.94;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
 @media (min-width: 761px) and (prefers-reduced-motion: no-preference) {
+  html.intro-pending .grid-lines {
+    opacity: 0;
+  }
+
+  html.intro-pending.intro-cat-visible .hero-grid::after {
+    opacity: 1;
+    will-change: transform;
+    animation: portfolio-grid-draw-horizontal 680ms var(--intro-ease) both;
+  }
+
+  html.intro-pending.intro-cat-visible .hero-grid::before {
+    opacity: 1;
+    will-change: transform;
+    animation: portfolio-grid-draw-vertical 520ms var(--intro-ease) 360ms both;
+  }
+
   html.intro-pending .projects-cell .cell-title,
   html.intro-pending .projects-cell .project-stack,
   html.intro-pending .case-studies-cell .cell-title,
@@ -140,8 +210,7 @@ a:focus-visible {
   html.intro-pending .statement > *,
   html.intro-pending .manifesto > * {
     opacity: 0;
-    transform: translate3d(0, 12px, 0);
-    will-change: opacity, transform;
+    will-change: opacity;
     backface-visibility: hidden;
   }
 
@@ -160,30 +229,36 @@ a:focus-visible {
     transform: translate3d(0, 0, 0);
   }
 
-  html.intro-reveal .projects-cell .cell-title,
-  html.intro-reveal .case-studies-cell .cell-title {
-    animation: portfolio-intro-reveal 480ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  html.intro-reveal .projects-cell .cell-title {
+    animation: portfolio-intro-settle 680ms var(--intro-ease) 220ms both;
   }
 
-  html.intro-reveal .projects-cell .project-stack,
+  html.intro-reveal .projects-cell .project-stack {
+    animation: portfolio-intro-settle 720ms var(--intro-ease) 270ms both;
+  }
+
+  html.intro-reveal .case-studies-cell .cell-title {
+    animation: portfolio-intro-settle 680ms var(--intro-ease) 350ms both;
+  }
+
   html.intro-reveal .case-studies-cell .project-stack {
-    animation: portfolio-intro-reveal 560ms cubic-bezier(0.16, 1, 0.3, 1) 45ms both;
+    animation: portfolio-intro-settle 720ms var(--intro-ease) 400ms both;
   }
 
   html.intro-reveal .statement > h1 {
-    animation: portfolio-intro-reveal 600ms cubic-bezier(0.16, 1, 0.3, 1) 125ms both;
+    animation: portfolio-intro-settle 760ms var(--intro-ease) both;
   }
 
   html.intro-reveal .hero-copy {
-    animation: portfolio-intro-reveal 600ms cubic-bezier(0.16, 1, 0.3, 1) 175ms both;
+    animation: portfolio-intro-settle 720ms var(--intro-ease) 110ms both;
   }
 
   html.intro-reveal .manifesto-model {
-    animation: portfolio-intro-fade 520ms cubic-bezier(0.16, 1, 0.3, 1) 165ms both;
+    animation: portfolio-intro-fade 620ms var(--intro-ease) 480ms both;
   }
 
   html.intro-reveal .manifesto-copy {
-    animation: portfolio-intro-reveal 600ms cubic-bezier(0.16, 1, 0.3, 1) 210ms both;
+    animation: portfolio-intro-settle 720ms var(--intro-ease) 520ms both;
   }
 }
 
