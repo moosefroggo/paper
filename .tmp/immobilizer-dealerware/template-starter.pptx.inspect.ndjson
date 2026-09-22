@@ -1,0 +1,246 @@
+{"kind":"deck","id":"pr/448iwj","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/ezucze","slide":1,"title":"Mustafa","textShapes":9}
+{"kind":"textbox","id":"sh/65onqtgv","slide":1,"name":"mustafa-title","text":"Mustafa","textPreview":"Mustafa","textChars":7,"textLines":1,"bbox":[72,54,500,92]}
+{"kind":"textbox","id":"sh/ju9c3elw","slide":1,"name":"Rectangle 1","text":"Product designer who codes.","textPreview":"Product designer who codes.","textChars":27,"textLines":1,"bbox":[72,150,500,42]}
+{"kind":"textbox","id":"sh/ytgba94b","slide":1,"name":"Rectangle 2","text":"I design systems, products, and interfaces, then stay close enough to the code to help ship them.","textPreview":"I design systems, products, and interfaces, then stay close enough to the code to help ship them.","textChars":97,"textLines":1,"bbox":[72,212,500,84]}
+{"kind":"shape","id":"sh/tkru9o3y","slide":1,"name":"Rectangle 3","bbox":[650,62,1,230]}
+{"kind":"textbox","id":"sh/8jitgjmt","slide":1,"name":"Rectangle 4","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[690,72,20,28]}
+{"kind":"textbox","id":"sh/7i9c7el8","slide":1,"name":"Rectangle 5","text":"Built the core platform for Educative’s B2B offerings","textPreview":"Built the core platform for Educative’s B2B offerings","textChars":53,"textLines":1,"bbox":[718,72,472,62]}
+{"kind":"textbox","id":"sh/6h0bet4n","slide":1,"name":"Rectangle 6","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[690,134,20,28]}
+{"kind":"textbox","id":"sh/hobud83a","slide":1,"name":"Rectangle 7","text":"Shipped a FERPA-compliant recruitment platform in under two weeks","textPreview":"Shipped a FERPA-compliant recruitment platform in under two weeks","textChars":65,"textLines":1,"bbox":[718,134,472,62]}
+{"kind":"textbox","id":"sh/gn2tk3mp","slide":1,"name":"Rectangle 8","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[690,196,20,28]}
+{"kind":"textbox","id":"sh/y14nmtgz","slide":1,"name":"Rectangle 9","text":"Led Educative’s first design system across B2C and B2B","textPreview":"Led Educative’s first design system across B2C and B2B","textChars":54,"textLines":1,"bbox":[718,196,472,62]}
+{"kind":"notes","id":"nt/ezucze","slide":1,"text":"Open with the throughline: product design depth plus the ability to ship in code.\n\n[Sources]\n- User-provided Pitch deck, slide 1: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 19: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 24: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/3gnkat","slide":2,"title":"SELECED WORK","textShapes":11}
+{"kind":"textbox","id":"sh/pgbyl8re","slide":2,"name":"Rectangle 14","text":"SELECED WORK","textPreview":"SELECED WORK","textChars":12,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/h4vqtkzm","slide":2,"name":"slide-title","text":"Three projects, one throughline","textPreview":"Three projects, one throughline","textChars":31,"textLines":1,"bbox":[72,88,850,132]}
+{"kind":"shape","id":"sh/w3290fy1","slide":2,"name":"Rectangle 2","bbox":[72,236,1136,1]}
+{"kind":"textbox","id":"sh/jqdsvuhs","slide":2,"name":"Rectangle 3","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[72,258,70,44]}
+{"kind":"textbox","id":"sh/i54r2pg7","slide":2,"name":"Rectangle 4","text":"Workflows","textPreview":"Workflows","textChars":9,"textLines":1,"bbox":[180,256,430,48]}
+{"kind":"textbox","id":"sh/5svaxkzi","slide":2,"name":"Rectangle 5","text":"Product strategy and interaction design","textPreview":"Product strategy and interaction design","textChars":39,"textLines":1,"bbox":[670,264,500,40]}
+{"kind":"shape","id":"sh/4rm94fyx","slide":2,"name":"Rectangle 6","bbox":[72,360,1136,1]}
+{"kind":"textbox","id":"sh/zu98jqh8","slide":2,"name":"Rectangle 7","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[72,382,70,44]}
+{"kind":"textbox","id":"sh/y90rqlgn","slide":2,"name":"Rectangle 8","text":"Capstone Matchmaker","textPreview":"Capstone Matchmaker","textChars":19,"textLines":1,"bbox":[180,380,430,48]}
+{"kind":"textbox","id":"sh/griho3ah","slide":2,"name":"Rectangle 9","text":"Design and full-stack development","textPreview":"Design and full-stack development","textChars":33,"textLines":1,"bbox":[670,388,500,40]}
+{"kind":"shape","id":"sh/hsryh8r2","slide":2,"name":"Rectangle 10","bbox":[72,484,1136,1]}
+{"kind":"textbox","id":"sh/up0zmtsr","slide":2,"name":"Rectangle 11","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[72,506,70,44]}
+{"kind":"textbox","id":"sh/fq9gfy9w","slide":2,"name":"Rectangle 12","text":"Design System + Motion","textPreview":"Design System + Motion","textChars":22,"textLines":1,"bbox":[180,504,430,48]}
+{"kind":"textbox","id":"sh/4fihs3at","slide":2,"name":"Rectangle 13","text":"Foundations, components, and behavior","textPreview":"Foundations, components, and behavior","textChars":37,"textLines":1,"bbox":[670,512,500,40]}
+{"kind":"notes","id":"nt/3gnkat","slide":2,"text":"Set expectations without slide numbers or false section parity.\n\n[Sources]\n- User-provided Pitch deck, slide 2: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/k4lkjs","slide":3,"title":"WORKFLOWS","textShapes":3}
+{"kind":"textbox","id":"sh/p8bq1cni","slide":3,"name":"Rectangle 4","text":"WORKFLOWS","textPreview":"WORKFLOWS","textChars":9,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/eh072x4v","slide":3,"name":"slide-title","text":"At Educative, the collaboration became a blocker when we scaled.","textPreview":"At Educative, the collaboration became a blocker when we scaled.","textChars":64,"textLines":1,"bbox":[72,88,920,120]}
+{"kind":"textbox","id":"sh/fi98v25g","slide":3,"name":"Rectangle 2","text":"Pagers waited on approvals, work was getting delayed, and our existing stack didn’t help with that.","textPreview":"Pagers waited on approvals, work was getting delayed, and our existing stack didn’t help with that.","textChars":99,"textLines":1,"bbox":[72,210,860,82]}
+{"kind":"image","id":"im/falwbu5w","slide":3,"name":"Picture 7","geometry":"roundRect","bbox":[90,332,1100,314]}
+{"kind":"notes","id":"nt/k4lkjs","slide":3,"text":"Introduce the company scale before the product.\n\n[Sources]\n- User-provided Pitch deck, slide 3: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/0ix6ca","slide":4,"title":"BUILD APPROACH","textShapes":12}
+{"kind":"textbox","id":"sh/0jepsb6p","slide":4,"name":"Rectangle 14","text":"BUILD APPROACH","textPreview":"BUILD APPROACH","textChars":14,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/2lwjmdkb","slide":4,"name":"slide-title","text":"Code-first kept the build focused.","textPreview":"Code-first kept the build focused.","textChars":34,"textLines":1,"bbox":[72,88,520,154]}
+{"kind":"textbox","id":"sh/3m5kvilw","slide":4,"name":"Rectangle 2","text":"I moved from design intent to working components with Radix UI and shadcn/ui, using AI-assisted development to accelerate implementation.","textPreview":"I moved from design intent to working components with Radix UI and shadcn/ui, using AI-assisted development to accelerate implementation.","textChars":137,"textLines":1,"bbox":[72,232.24,520,124]}
+{"kind":"textbox","id":"sh/gje1k32l","slide":4,"name":"Rectangle 3","text":"I owned the design end to end including","textPreview":"I owned the design end to end including","textChars":39,"textLines":1,"bbox":[819.81,88,300,34]}
+{"kind":"textbox","id":"sh/1kn2t83q","slide":4,"name":"Rectangle 4","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[819.81,136,20,28]}
+{"kind":"textbox","id":"sh/ehwjitkf","slide":4,"name":"Rectangle 5","text":"Product decisions","textPreview":"Product decisions","textChars":17,"textLines":1,"bbox":[847.81,136,402,42]}
+{"kind":"textbox","id":"sh/fi5kryl0","slide":4,"name":"Rectangle 6","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[819.81,178,20,28]}
+{"kind":"textbox","id":"sh/sfu1g329","slide":4,"name":"Rectangle 7","text":"Information architecture","textPreview":"Information architecture","textChars":24,"textLines":1,"bbox":[847.81,178,402,42]}
+{"kind":"textbox","id":"sh/tg3ipo3u","slide":4,"name":"Rectangle 8","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[819.81,220,20,28]}
+{"kind":"textbox","id":"sh/98n6pgn6","slide":4,"name":"Rectangle 9","text":"Interaction model","textPreview":"Interaction model","textChars":17,"textLines":1,"bbox":[847.81,220,402,42]}
+{"kind":"textbox","id":"sh/87epwv6l","slide":4,"name":"Rectangle 10","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[819.81,262,20,28]}
+{"kind":"textbox","id":"sh/n65onq50","slide":4,"name":"Rectangle 11","text":"Quality bar","textPreview":"Quality bar","textChars":11,"textLines":1,"bbox":[847.81,262,402,42]}
+{"kind":"image","id":"im/sna14jal","slide":4,"name":"Picture 21","bbox":[-236.15,356.24,842.88,446.78]}
+{"kind":"image","id":"im/to3ixor6","slide":4,"name":"Picture 16","bbox":[-224,372,816,398.83]}
+{"kind":"image","id":"im/yxsjy9sj","slide":4,"name":"Picture 22","bbox":[625.56,356.24,842.88,446.78]}
+{"kind":"image","id":"im/jy10re94","slide":4,"name":"Picture 19","bbox":[640,372,816,396.13]}
+{"kind":"notes","id":"nt/0ix6ca","slide":4,"text":"Explain code-first as a product decision, not a shortcut.\n\n[Sources]\n- User-provided Pitch deck, slide 20: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 21: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 22: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/bj1i8b","slide":5,"title":"WORKFLOWS","textShapes":3}
+{"kind":"textbox","id":"sh/ix8va1oz","slide":5,"name":"Rectangle 4","text":"WORKFLOWS","textPreview":"WORKFLOWS","textChars":9,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/t4jepg7m","slide":5,"name":"slide-title","text":"At Educative, the collaboration became a blocker when we scaled.","textPreview":"At Educative, the collaboration became a blocker when we scaled.","textChars":64,"textLines":1,"bbox":[72,88,920,120]}
+{"kind":"textbox","id":"sh/s3qdgv61","slide":5,"name":"Rectangle 2","text":"Pagers waited on approvals, work was getting delayed, and our existing stack didn’t help with that.","textPreview":"Pagers waited on approvals, work was getting delayed, and our existing stack didn’t help with that.","textChars":99,"textLines":1,"bbox":[72,210,860,82]}
+{"kind":"image","id":"im/o3u1sn25","slide":5,"name":"Picture 7","geometry":"roundRect","bbox":[90,332,1100,314]}
+{"kind":"notes","id":"nt/bj1i8b","slide":5,"text":"Introduce the company scale before the product.\n\n[Sources]\n- User-provided Pitch deck, slide 3: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/l1fa2d","slide":6,"title":"PRODUCT DIRECTION","textShapes":10}
+{"kind":"textbox","id":"sh/6p0be9kn","slide":6,"name":"Rectangle 11","text":"PRODUCT DIRECTION","textPreview":"PRODUCT DIRECTION","textChars":17,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/98nm18bi","slide":6,"name":"slide-title","text":"I designed the product according to how we worked","textPreview":"I designed the product according to how we worked","textChars":49,"textLines":1,"bbox":[72,88,930,132]}
+{"kind":"textbox","id":"sh/87els3ux","slide":6,"name":"Rectangle 2","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[72,278,20,28]}
+{"kind":"textbox","id":"sh/vap43ito","slide":6,"name":"Rectangle 3","text":"A self-contained knowledge base","textPreview":"A self-contained knowledge base","textChars":31,"textLines":1,"bbox":[100,278,452,58]}
+{"kind":"textbox","id":"sh/a9g3uds3","slide":6,"name":"Rectangle 4","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[72,336,20,28]}
+{"kind":"textbox","id":"sh/xc7m5sbu","slide":6,"name":"Rectangle 5","text":"A multiplayer editor for tasks and comments","textPreview":"A multiplayer editor for tasks and comments","textChars":43,"textLines":1,"bbox":[100,336,452,58]}
+{"kind":"textbox","id":"sh/wbylwna9","slide":6,"name":"Rectangle 6","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[72,394,20,28]}
+{"kind":"textbox","id":"sh/jyp47itk","slide":6,"name":"Rectangle 7","text":"A review system modeled on pull requests","textPreview":"A review system modeled on pull requests","textChars":40,"textLines":1,"bbox":[100,394,452,58]}
+{"kind":"textbox","id":"sh/ixg3yxsz","slide":6,"name":"Rectangle 8","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[72,452,20,28]}
+{"kind":"textbox","id":"sh/sritgz2t","slide":6,"name":"Rectangle 9","text":"A shared hierarchy from groups to subtasks","textPreview":"A shared hierarchy from groups to subtasks","textChars":42,"textLines":1,"bbox":[100,452,452,58]}
+{"kind":"image","id":"im/03itgva5","slide":6,"name":"Picture 21","geometry":"roundRect","bbox":[620,218,590,400]}
+{"kind":"notes","id":"nt/l1fa2d","slide":6,"text":"Connect the feature set to the working model uncovered in research.\n\n[Sources]\n- User-provided Pitch deck, slide 8: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/eo2hm6","slide":7,"title":"IMPACT","textShapes":4}
+{"kind":"textbox","id":"sh/na9o3i50","slide":7,"name":"Rectangle 6","text":"IMPACT","textPreview":"IMPACT","textChars":6,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/ad0nyx4r","slide":7,"name":"Rectangle 1","text":"$100k deal closed","textPreview":"$100k deal closed","textChars":17,"textLines":1,"bbox":[72,176,486.86,216]}
+{"kind":"shape","id":"sh/ve9o7i5c","slide":7,"name":"Rectangle 2","bbox":[72,292,500,100]}
+{"kind":"textbox","id":"sh/8bi5wnml","slide":7,"name":"Rectangle 3","text":"Workflows helped Educative close its biggest customer yet.","textPreview":"Workflows helped Educative close its biggest customer yet.","textChars":58,"textLines":1,"bbox":[760,240,410,110]}
+{"kind":"shape","id":"sh/9cr65sn6","slide":7,"name":"Rectangle 4","bbox":[72,600,1136,1]}
+{"kind":"textbox","id":"sh/m90nud4f","slide":7,"name":"Rectangle 5","text":"The outcome tied the product directly to enterprise growth.","textPreview":"The outcome tied the product directly to enterprise growth.","textChars":59,"textLines":1,"bbox":[72,626,760,44]}
+{"kind":"notes","id":"nt/eo2hm6","slide":7,"text":"Be precise about what the source deck claims: a six-figure deal and the biggest customer yet.\n\n[Sources]\n- User-provided Pitch deck, slide 18: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/4umdvk","slide":8,"title":"WORKFLOWS","textShapes":3}
+{"kind":"textbox","id":"sh/x8j6hsbq","slide":8,"name":"Rectangle 4","text":"WORKFLOWS","textPreview":"WORKFLOWS","textChars":9,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/2h8n2dc3","slide":8,"name":"slide-title","text":"At Educative, the collaboration became a blocker when we scaled.","textPreview":"At Educative, the collaboration became a blocker when we scaled.","textChars":64,"textLines":1,"bbox":[72,88,920,120]}
+{"kind":"textbox","id":"sh/nihobito","slide":8,"name":"Rectangle 2","text":"Pagers waited on approvals, work was getting delayed, and our existing stack didn’t help with that.","textPreview":"Pagers waited on approvals, work was getting delayed, and our existing stack didn’t help with that.","textChars":99,"textLines":1,"bbox":[72,210,860,82]}
+{"kind":"image","id":"im/z2hkrix8","slide":8,"name":"Picture 7","geometry":"roundRect","bbox":[90,332,1100,314]}
+{"kind":"notes","id":"nt/4umdvk","slide":8,"text":"Introduce the company scale before the product.\n\n[Sources]\n- User-provided Pitch deck, slide 3: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/s7jokw","slide":9,"title":"RESEARCH","textShapes":19}
+{"kind":"textbox","id":"sh/cvu9076d","slide":9,"name":"Rectangle 21","text":"RESEARCH","textPreview":"RESEARCH","textChars":8,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/on614zqd","slide":9,"name":"slide-title","text":"I spoke with 18 engineering managers and 13 engineers.","textPreview":"I spoke with 18 engineering managers and 13 engineers.","textChars":54,"textLines":1,"bbox":[72,88,870,154]}
+{"kind":"textbox","id":"sh/9of2d4ri","slide":9,"name":"Rectangle 2","text":"Goal: Understand the problem space","textPreview":"Goal: Understand the problem space","textChars":34,"textLines":1,"bbox":[72,250,620,40]}
+{"kind":"shape","id":"sh/apoj6983","slide":9,"name":"Rectangle 3","bbox":[72,300,535,350]}
+{"kind":"shape","id":"sh/bqhkfu9o","slide":9,"name":"Rectangle 4","bbox":[673,300,535,350]}
+{"kind":"textbox","id":"sh/wrql8zq9","slide":9,"name":"Rectangle 5","text":"Assumptions","textPreview":"Assumptions","textChars":11,"textLines":1,"bbox":[104,330,300,34]}
+{"kind":"textbox","id":"sh/xsz2h4ru","slide":9,"name":"Rectangle 6","text":"The tooling was broken.","textPreview":"The tooling was broken.","textChars":23,"textLines":1,"bbox":[104,378,420,80]}
+{"kind":"textbox","id":"sh/qt4ju58z","slide":9,"name":"Rectangle 7","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[104,494,20,28]}
+{"kind":"textbox","id":"sh/rudk3a9k","slide":9,"name":"Rectangle 8","text":"Standardize content","textPreview":"Standardize content","textChars":19,"textLines":1,"bbox":[132,494,392,40]}
+{"kind":"textbox","id":"sh/j6p8nmls","slide":9,"name":"Rectangle 9","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[104,534,20,28]}
+{"kind":"textbox","id":"sh/i5g7uh4n","slide":9,"name":"Rectangle 10","text":"Fix the journey","textPreview":"Fix the journey","textChars":15,"textLines":1,"bbox":[132,534,392,40]}
+{"kind":"textbox","id":"sh/587qpw3y","slide":9,"name":"Rectangle 11","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[104,574,20,28]}
+{"kind":"textbox","id":"sh/47ypwrmd","slide":9,"name":"Rectangle 12","text":"Add more process","textPreview":"Add more process","textChars":16,"textLines":1,"bbox":[132,574,392,40]}
+{"kind":"textbox","id":"sh/v25ojmlw","slide":9,"name":"Rectangle 13","text":"Findings","textPreview":"Findings","textChars":8,"textLines":1,"bbox":[705,330,300,34]}
+{"kind":"textbox","id":"sh/u1w7qh4b","slide":9,"name":"Rectangle 14","text":"The workflow was not optimized for us","textPreview":"The workflow was not optimized for us","textChars":37,"textLines":1,"bbox":[705,378,450,92]}
+{"kind":"textbox","id":"sh/h4nqlc32","slide":9,"name":"Rectangle 15","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[705,494,20,28]}
+{"kind":"textbox","id":"sh/w3eps7mh","slide":9,"name":"Rectangle 16","text":"Content was searchable but scattered","textPreview":"Content was searchable but scattered","textChars":36,"textLines":1,"bbox":[733,494,402,40]}
+{"kind":"textbox","id":"sh/7y5of250","slide":9,"name":"Rectangle 17","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[705,534,20,28]}
+{"kind":"textbox","id":"sh/mxc7mx4f","slide":9,"name":"Rectangle 18","text":"Lack of updates, lots of things remained stale","textPreview":"Lack of updates, lots of things remained stale","textChars":46,"textLines":1,"bbox":[733,534,402,40]}
+{"kind":"textbox","id":"sh/a9c7yxo7","slide":9,"name":"Rectangle 19","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[705,574,20,28]}
+{"kind":"textbox","id":"sh/bal872ps","slide":9,"name":"Rectangle 20","text":"Existing tools worked for separate teams, but not when collaborating","textPreview":"Existing tools worked for separate teams, but not when collaborating","textChars":68,"textLines":1,"bbox":[733,574,402,40]}
+{"kind":"notes","id":"nt/s7jokw","slide":9,"text":"State the research insight as a diagnosis, not a list of bullets.\n\n[Sources]\n- User-provided Pitch deck, slide 6: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/rmd5vw","slide":10,"title":"PROBLEM FRAMING","textShapes":7}
+{"kind":"textbox","id":"sh/t0jmp8v2","slide":10,"name":"Rectangle 8","text":"PROBLEM FRAMING","textPreview":"PROBLEM FRAMING","textChars":15,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/a583m9w3","slide":10,"name":"slide-title","text":"I classified the problem into two parts: foundation and visibility","textPreview":"I classified the problem into two parts: foundation and visibility","textChars":66,"textLines":1,"bbox":[72,88,900,132]}
+{"kind":"shape","id":"sh/v6h4fedo","slide":10,"name":"Rectangle 2","bbox":[640,252,1,320]}
+{"kind":"textbox","id":"sh/kbalsje5","slide":10,"name":"Rectangle 3","text":"First-order problem","textPreview":"First-order problem","textChars":19,"textLines":1,"bbox":[72,270,460,32]}
+{"kind":"textbox","id":"sh/5cjmlovq","slide":10,"name":"Rectangle 4","text":"How might we organize the work?","textPreview":"How might we organize the work?","textChars":31,"textLines":1,"bbox":[72,330,480,150]}
+{"kind":"textbox","id":"sh/i983qtwf","slide":10,"name":"Rectangle 5","text":"Second-order problem","textPreview":"Second-order problem","textChars":20,"textLines":1,"bbox":[704,270,460,32]}
+{"kind":"textbox","id":"sh/jah4jyd0","slide":10,"name":"Rectangle 6","text":"How might we make progress visible?","textPreview":"How might we make progress visible?","textChars":35,"textLines":1,"bbox":[704,330,480,150]}
+{"kind":"textbox","id":"sh/sza5w3eh","slide":10,"name":"Rectangle 7","text":"To make the progress visible, we needed to have a solid foundation to start first. Existing tools were opinionated. We wanted something that worked for all of our teams.","textPreview":"To make the progress visible, we needed to have a solid foundation to start first. Existing tools were opinionated. We wanted something t...","textChars":169,"textLines":1,"bbox":[72,612,850,52]}
+{"kind":"notes","id":"nt/rmd5vw","slide":10,"text":"Explain the order of operations clearly.\n\n[Sources]\n- User-provided Pitch deck, slide 5: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 7: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/j1m63g","slide":11,"title":"PRODUCT DIRECTION","textShapes":10}
+{"kind":"textbox","id":"sh/618fet87","slide":11,"name":"Rectangle 11","text":"PRODUCT DIRECTION","textPreview":"PRODUCT DIRECTION","textChars":17,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/ps7i5cbm","slide":11,"name":"slide-title","text":"I designed the product according to how we worked","textPreview":"I designed the product according to how we worked","textChars":49,"textLines":1,"bbox":[72,88,930,132]}
+{"kind":"textbox","id":"sh/oryhcru1","slide":11,"name":"Rectangle 2","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[72,278,20,28]}
+{"kind":"textbox","id":"sh/fm50z2dk","slide":11,"name":"Rectangle 3","text":"A self-contained knowledge base","textPreview":"A self-contained knowledge base","textChars":31,"textLines":1,"bbox":[100,278,452,58]}
+{"kind":"textbox","id":"sh/elwz6xcz","slide":11,"name":"Rectangle 4","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[72,336,20,28]}
+{"kind":"textbox","id":"sh/1oni1cva","slide":11,"name":"Rectangle 5","text":"A multiplayer editor for tasks and comments","textPreview":"A multiplayer editor for tasks and comments","textChars":43,"textLines":1,"bbox":[100,336,452,58]}
+{"kind":"textbox","id":"sh/gneh87up","slide":11,"name":"Rectangle 6","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[72,394,20,28]}
+{"kind":"textbox","id":"sh/zip0b6to","slide":11,"name":"Rectangle 7","text":"A review system modeled on pull requests","textPreview":"A review system modeled on pull requests","textChars":40,"textLines":1,"bbox":[100,394,452,58]}
+{"kind":"textbox","id":"sh/yhgji1c3","slide":11,"name":"Rectangle 8","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[72,452,20,28]}
+{"kind":"textbox","id":"sh/83qxg3qd","slide":11,"name":"Rectangle 9","text":"A shared hierarchy from groups to subtasks","textPreview":"A shared hierarchy from groups to subtasks","textChars":42,"textLines":1,"bbox":[100,452,452,58]}
+{"kind":"image","id":"im/kvqhk7ih","slide":11,"name":"Picture 21","geometry":"roundRect","bbox":[620,218,590,400]}
+{"kind":"notes","id":"nt/j1m63g","slide":11,"text":"Connect the feature set to the working model uncovered in research.\n\n[Sources]\n- User-provided Pitch deck, slide 8: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/ekg3a4","slide":12,"title":"BUILD TIMELINE","textShapes":11}
+{"kind":"textbox","id":"sh/8nq9cfmd","slide":12,"name":"Rectangle 16","text":"BUILD TIMELINE","textPreview":"BUILD TIMELINE","textChars":14,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/on6p0ri5","slide":12,"name":"slide-title","text":"I shipped a barebones MVP in one week and spent 8 months turning it into a 0 to 100 platform","textPreview":"I shipped a barebones MVP in one week and spent 8 months turning it into a 0 to 100 platform","textChars":92,"textLines":1,"bbox":[72,88,1083.65,160]}
+{"kind":"shape","id":"sh/ex47uh03","slide":12,"name":"Rectangle 3","bbox":[160,430,960,4]}
+{"kind":"shape","id":"sh/fyxonmh8","slide":12,"name":"Oval 4","bbox":[178,420,24,24]}
+{"kind":"textbox","id":"sh/0z6pwrit","slide":12,"name":"Rectangle 5","text":"Week 1","textPreview":"Week 1","textChars":6,"textLines":1,"bbox":[80,350,220,28]}
+{"kind":"textbox","id":"sh/10f6pwze","slide":12,"name":"Rectangle 6","text":"MVP shipped","textPreview":"MVP shipped","textChars":11,"textLines":1,"bbox":[60,476,260,66]}
+{"kind":"textbox","id":"sh/yt876lg7","slide":12,"name":"Rectangle 7","text":"Shipped fast, broke things, learned a lot","textPreview":"Shipped fast, broke things, learned a lot","textChars":41,"textLines":1,"bbox":[60,552,311.29,58]}
+{"kind":"shape","id":"sh/zuh8z6hs","slide":12,"name":"Oval 8","bbox":[628,420,24,24]}
+{"kind":"textbox","id":"sh/jyxsfa5w","slide":12,"name":"Rectangle 9","text":"Months 2–4","textPreview":"Months 2–4","textChars":10,"textLines":1,"bbox":[530,350,220,28]}
+{"kind":"textbox","id":"sh/yxor65ob","slide":12,"name":"Rectangle 10","text":"Learned and rebuilt","textPreview":"Learned and rebuilt","textChars":19,"textLines":1,"bbox":[510,476,260,66]}
+{"kind":"textbox","id":"sh/lkfahkn2","slide":12,"name":"Rectangle 11","text":"Feedback tools like Userback, and analytics informed a few decisions","textPreview":"Feedback tools like Userback, and analytics informed a few decisions","textChars":68,"textLines":1,"bbox":[495,552,290,58]}
+{"kind":"shape","id":"sh/kj698f6h","slide":12,"name":"Oval 12","bbox":[1078,420,24,24]}
+{"kind":"textbox","id":"sh/7mhsju58","slide":12,"name":"Rectangle 13","text":"Month 8","textPreview":"Month 8","textChars":7,"textLines":1,"bbox":[980,350,220,28]}
+{"kind":"textbox","id":"sh/6l8rap4n","slide":12,"name":"Rectangle 14","text":"Platform shipped","textPreview":"Platform shipped","textChars":16,"textLines":1,"bbox":[960,476,260,66]}
+{"kind":"textbox","id":"sh/tozalkny","slide":12,"name":"Rectangle 15","text":"Planning, review, and docs connected","textPreview":"Planning, review, and docs connected","textChars":36,"textLines":1,"bbox":[945,552,290,58]}
+{"kind":"notes","id":"nt/ekg3a4","slide":12,"text":"Resolve the apparent conflict between one week and eight months.\n\n[Sources]\n- User-provided Pitch deck, slide 8: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 10: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/tc8d78","slide":13,"title":"WHAT SHIPPED","textShapes":2}
+{"kind":"textbox","id":"sh/doza1072","slide":13,"name":"what-shipped-eyebrow","text":"WHAT SHIPPED","textPreview":"WHAT SHIPPED","textChars":12,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/3yhsvqp0","slide":13,"name":"screen-title","text":"Task hub","textPreview":"Task hub","textChars":8,"textLines":1,"bbox":[72,88,1010,64]}
+{"kind":"image","id":"im/lwrqxs7u","slide":13,"name":"","geometry":"roundRect","bbox":[160,165,960,540]}
+{"kind":"notes","id":"nt/tc8d78","slide":13,"text":"Use this as the product synthesis slide, not four separate reveals.\n\n[Sources]\n- User-provided Pitch deck, slide 14: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 15: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 16: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 17: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/8kvmli","slide":14,"title":"WHAT SHIPPED","textShapes":2}
+{"kind":"textbox","id":"sh/2hc7a1kj","slide":14,"name":"what-shipped-eyebrow","text":"WHAT SHIPPED","textPreview":"WHAT SHIPPED","textChars":12,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/gfup8r2d","slide":14,"name":"screen-title","text":"Review hub","textPreview":"Review hub","textChars":10,"textLines":1,"bbox":[72,88,1010,64]}
+{"kind":"image","id":"im/id0ruhob","slide":14,"name":"","geometry":"roundRect","bbox":[160,165,960,540]}
+{"kind":"notes","id":"nt/8kvmli","slide":14,"text":"Use this as the product synthesis slide, not four separate reveals.\n\n[Sources]\n- User-provided Pitch deck, slide 14: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 15: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 16: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 17: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/4ivjld","slide":15,"title":"WHAT SHIPPED","textShapes":2}
+{"kind":"textbox","id":"sh/6tk7ehwb","slide":15,"name":"what-shipped-eyebrow","text":"WHAT SHIPPED","textPreview":"WHAT SHIPPED","textChars":12,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/gjmpkred","slide":15,"name":"screen-title","text":"Projects","textPreview":"Projects","textChars":8,"textLines":1,"bbox":[72,88,1010,64]}
+{"kind":"image","id":"im/i9kzid8n","slide":15,"name":"","geometry":"roundRect","bbox":[160,165,960,540]}
+{"kind":"notes","id":"nt/4ivjld","slide":15,"text":"Use this as the product synthesis slide, not four separate reveals.\n\n[Sources]\n- User-provided Pitch deck, slide 14: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 15: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 16: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 17: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/az81hv","slide":16,"title":"WHAT SHIPPED","textShapes":2}
+{"kind":"textbox","id":"sh/hofmxsz2","slide":16,"name":"what-shipped-eyebrow","text":"WHAT SHIPPED","textPreview":"WHAT SHIPPED","textChars":12,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/jqx4z2hs","slide":16,"name":"screen-title","text":"Document editor","textPreview":"Document editor","textChars":15,"textLines":1,"bbox":[72,88,1010,64]}
+{"kind":"image","id":"im/tkvqpkbq","slide":16,"name":"","geometry":"roundRect","bbox":[160,165,960,540]}
+{"kind":"notes","id":"nt/az81hv","slide":16,"text":"Use this as the product synthesis slide, not four separate reveals.\n\n[Sources]\n- User-provided Pitch deck, slide 14: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 15: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 16: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 17: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/nybmi6","slide":17,"title":"IMPACT","textShapes":4}
+{"kind":"textbox","id":"sh/to7e1svu","slide":17,"name":"Rectangle 6","text":"IMPACT","textPreview":"IMPACT","textChars":6,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/grydc7ul","slide":17,"name":"Rectangle 1","text":"$100k deal closed","textPreview":"$100k deal closed","textChars":17,"textLines":1,"bbox":[72,176,486.86,216]}
+{"kind":"shape","id":"sh/hsre5cvq","slide":17,"name":"Rectangle 2","bbox":[72,292,500,100]}
+{"kind":"textbox","id":"sh/6lgv6dw3","slide":17,"name":"Rectangle 3","text":"Workflows helped Educative close its biggest customer yet.","textPreview":"Workflows helped Educative close its biggest customer yet.","textChars":58,"textLines":1,"bbox":[760,240,410,110]}
+{"kind":"shape","id":"sh/7mpwzido","slide":17,"name":"Rectangle 4","bbox":[72,600,1136,1]}
+{"kind":"textbox","id":"sh/8nyd8nu9","slide":17,"name":"Rectangle 5","text":"The outcome tied the product directly to enterprise growth.","textPreview":"The outcome tied the product directly to enterprise growth.","textChars":59,"textLines":1,"bbox":[72,626,760,44]}
+{"kind":"notes","id":"nt/nybmi6","slide":17,"text":"Be precise about what the source deck claims: a six-figure deal and the biggest customer yet.\n\n[Sources]\n- User-provided Pitch deck, slide 18: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/9mk6kc","slide":18,"title":"CAPSTONE MATCHMAKER","textShapes":3}
+{"kind":"textbox","id":"sh/tcjq5gj2","slide":18,"name":"Rectangle 4","text":"CAPSTONE MATCHMAKER","textPreview":"CAPSTONE MATCHMAKER","textChars":19,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/il87q1kf","slide":18,"name":"slide-title","text":"A FERPA-compliant recruitment platform, shipped in under two weeks.","textPreview":"A FERPA-compliant recruitment platform, shipped in under two weeks.","textChars":67,"textLines":1,"bbox":[72,88,1080,150]}
+{"kind":"textbox","id":"sh/j6h8z6l0","slide":18,"name":"Rectangle 2","text":"I designed and built the SaaS product end to end with Next.js, PostgreSQL, and AWS EC2.","textPreview":"I designed and built the SaaS product end to end with Next.js, PostgreSQL, and AWS EC2.","textChars":87,"textLines":1,"bbox":[72,220,870,64]}
+{"kind":"image","id":"im/3m5c3u5w","slide":18,"name":"Picture 5","bbox":[74.93,284,1124.16,534.95]}
+{"kind":"image","id":"im/2lwva94b","slide":18,"name":"Picture 3","geometry":"roundRect","bbox":[99.1,306.9,1074.23,523.62]}
+{"kind":"notes","id":"nt/9mk6kc","slide":18,"text":"Lead with the product and constraint, not the stack or AI credits.\n\n[Sources]\n- User-provided Pitch deck, slide 1: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 19: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/7hhs8b","slide":19,"title":"BUILD APPROACH","textShapes":12}
+{"kind":"textbox","id":"sh/h4vq14zu","slide":19,"name":"Rectangle 14","text":"BUILD APPROACH","textPreview":"BUILD APPROACH","textChars":14,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/5cv6ho32","slide":19,"name":"slide-title","text":"Code-first kept the build focused.","textPreview":"Code-first kept the build focused.","textChars":34,"textLines":1,"bbox":[72,88,520,154]}
+{"kind":"textbox","id":"sh/4b2p832h","slide":19,"name":"Rectangle 2","text":"I moved from design intent to working components with Radix UI and shadcn/ui, using AI-assisted development to accelerate implementation.","textPreview":"I moved from design intent to working components with Radix UI and shadcn/ui, using AI-assisted development to accelerate implementation.","textChars":137,"textLines":1,"bbox":[72,232.24,520,124]}
+{"kind":"textbox","id":"sh/v6tobel0","slide":19,"name":"Rectangle 3","text":"I owned the design end to end including","textPreview":"I owned the design end to end including","textChars":39,"textLines":1,"bbox":[819.81,88,300,34]}
+{"kind":"textbox","id":"sh/u5k729kf","slide":19,"name":"Rectangle 4","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[819.81,136,20,28]}
+{"kind":"textbox","id":"sh/h8b6do36","slide":19,"name":"Rectangle 5","text":"Product decisions","textPreview":"Product decisions","textChars":17,"textLines":1,"bbox":[847.81,136,402,42]}
+{"kind":"textbox","id":"sh/w72p4j2l","slide":19,"name":"Rectangle 6","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[819.81,178,20,28]}
+{"kind":"textbox","id":"sh/f2d8nilk","slide":19,"name":"Rectangle 7","text":"Information architecture","textPreview":"Information architecture","textChars":24,"textLines":1,"bbox":[847.81,178,402,42]}
+{"kind":"textbox","id":"sh/e147edkz","slide":19,"name":"Rectangle 8","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[819.81,220,20,28]}
+{"kind":"textbox","id":"sh/47mpwjy5","slide":19,"name":"Rectangle 9","text":"Interaction model","textPreview":"Interaction model","textChars":17,"textLines":1,"bbox":[847.81,220,402,42]}
+{"kind":"textbox","id":"sh/58vq5ofq","slide":19,"name":"Rectangle 10","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[819.81,262,20,28]}
+{"kind":"textbox","id":"sh/i547u9gf","slide":19,"name":"Rectangle 11","text":"Quality bar","textPreview":"Quality bar","textChars":11,"textLines":1,"bbox":[847.81,262,402,42]}
+{"kind":"image","id":"im/twn2pgj2","slide":19,"name":"Picture 21","bbox":[-236.15,356.24,842.88,446.78]}
+{"kind":"image","id":"im/sve1wb2h","slide":19,"name":"Picture 16","bbox":[-224,372,816,398.83]}
+{"kind":"image","id":"im/fipkrq1s","slide":19,"name":"Picture 22","bbox":[625.56,356.24,842.88,446.78]}
+{"kind":"image","id":"im/ehgjylkn","slide":19,"name":"Picture 19","bbox":[640,372,816,396.13]}
+{"kind":"notes","id":"nt/7hhs8b","slide":19,"text":"Explain code-first as a product decision, not a shortcut.\n\n[Sources]\n- User-provided Pitch deck, slide 20: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 21: https://pitch.com/v/slide-deck-jq3j7w\n- User-provided Pitch deck, slide 22: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/hqw4to","slide":20,"title":"SHIPPED PRODUCT","textShapes":3}
+{"kind":"textbox","id":"sh/xsf6h4r2","slide":20,"name":"Rectangle 4","text":"SHIPPED PRODUCT","textPreview":"SHIPPED PRODUCT","textChars":15,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/yto7q987","slide":20,"name":"slide-title","text":"All 5 personas have actionable dashboards.","textPreview":"All 5 personas have actionable dashboards.","textChars":42,"textLines":1,"bbox":[72,88,980,132]}
+{"kind":"textbox","id":"sh/juxoje9s","slide":20,"name":"Rectangle 2","text":"I discovered the problems that surfaced throughout the capstone process, and after rigorous prioritization with team, I built dashboards to unblock each user persona.","textPreview":"I discovered the problems that surfaced throughout the capstone process, and after rigorous prioritization with team, I built dashboards ...","textChars":166,"textLines":1,"bbox":[72,166,830,54]}
+{"kind":"image","id":"im/vepsfapw","slide":20,"name":"Picture 6","bbox":[77.92,250.79,1124.16,534.95]}
+{"kind":"image","id":"im/utgbm58b","slide":20,"name":"Picture 5","geometry":"roundRect","bbox":[95.88,272.57,1089.66,530.42]}
+{"kind":"notes","id":"nt/hqw4to","slide":20,"text":"Show the outcome of the code-first build.\n\n[Sources]\n- User-provided Pitch deck, slide 23: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/pc4chq","slide":21,"title":"DESIGN SYSTEM","textShapes":3}
+{"kind":"textbox","id":"sh/jit4buh4","slide":21,"name":"Rectangle 4","text":"DESIGN SYSTEM","textPreview":"DESIGN SYSTEM","textChars":13,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/wfi50zit","slide":21,"name":"slide-title","text":"Educative’s first design system unified B2C and B2B products.","textPreview":"Educative’s first design system unified B2C and B2B products.","textChars":61,"textLines":1,"bbox":[72,88,1050,140]}
+{"kind":"textbox","id":"sh/xgrm9kzy","slide":21,"name":"Rectangle 2","text":"I led the design and implementation from foundations through reusable patterns.","textPreview":"I led the design and implementation from foundations through reusable patterns.","textChars":79,"textLines":1,"bbox":[72,212,840,56]}
+{"kind":"image","id":"im/9sju9cnm","slide":21,"name":"Picture 3","bbox":[-183.2,286.28,1646.39,811.35]}
+{"kind":"notes","id":"nt/pc4chq","slide":21,"text":"State the system’s scope without the redundant phrase 'first design system redesigned.'\n\n[Sources]\n- User-provided Pitch deck, slide 24: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/adtk0w","slide":22,"title":"FOUNDATIONS","textShapes":10}
+{"kind":"textbox","id":"sh/ra9o3yx4","slide":22,"name":"Rectangle 11","text":"FOUNDATIONS","textPreview":"FOUNDATIONS","textChars":11,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/etsfih07","slide":22,"name":"slide-title","text":"The system documented the decisions every product shared.","textPreview":"The system documented the decisions every product shared.","textChars":57,"textLines":1,"bbox":[72,88,970,160]}
+{"kind":"textbox","id":"sh/fu1grm1c","slide":22,"name":"Rectangle 2","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[72,350,20,28]}
+{"kind":"textbox","id":"sh/ojuhobi9","slide":22,"name":"Rectangle 3","text":"Type hierarchy","textPreview":"Type hierarchy","textChars":14,"textLines":1,"bbox":[100,350,352,58]}
+{"kind":"textbox","id":"sh/pk3yxgju","slide":22,"name":"Rectangle 4","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[72,408,20,28]}
+{"kind":"textbox","id":"sh/2hcfm103","slide":22,"name":"Rectangle 5","text":"Color and contrast","textPreview":"Color and contrast","textChars":18,"textLines":1,"bbox":[100,408,352,58]}
+{"kind":"textbox","id":"sh/nilgv61o","slide":22,"name":"Rectangle 6","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[72,466,20,28]}
+{"kind":"textbox","id":"sh/cnuhsbi5","slide":22,"name":"Rectangle 7","text":"Accessibility","textPreview":"Accessibility","textChars":13,"textLines":1,"bbox":[100,466,352,58]}
+{"kind":"textbox","id":"sh/xony1gjq","slide":22,"name":"Rectangle 8","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[72,524,20,28]}
+{"kind":"textbox","id":"sh/dcr658fa","slide":22,"name":"Rectangle 9","text":"Elevation and shadows","textPreview":"Elevation and shadows","textChars":21,"textLines":1,"bbox":[100,524,352,58]}
+{"kind":"image","id":"im/xc7apgjq","slide":22,"name":"Picture 10","bbox":[369.15,247.56,863.66,424.44]}
+{"kind":"notes","id":"nt/adtk0w","slide":22,"text":"Describe what the foundation artifact contains before moving to motion.\n\n[Sources]\n- User-provided Pitch deck, slide 25: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/0hu7fe","slide":23,"title":"Side Project","textShapes":2}
+{"kind":"textbox","id":"sh/dkr2183u","slide":23,"name":"Rectangle 4","text":"Side Project","textPreview":"Side Project","textChars":12,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/2dgjmtk7","slide":23,"name":"slide-title","text":"A Three.js and GLSL based gradient generator","textPreview":"A Three.js and GLSL based gradient generator","textChars":44,"textLines":1,"bbox":[72,88,1026.18,73.45]}
+{"kind":"image","id":"im/ji5o7yd0","slide":23,"name":"Picture 15","bbox":[76.44,209.84,1124.16,534.95]}
+{"kind":"image","id":"im/yhw7ytcf","slide":23,"name":"Screen Recording 2026-07-29 at 12.58.51 PM (1)","geometry":"roundRect","bbox":[87.9,222.59,1101.35,534.95]}
+{"kind":"notes","id":"nt/0hu7fe","slide":23,"text":"Connect motion back to the design system rather than presenting it as a separate gallery.\n\n[Sources]\n- User-provided Pitch deck, slide 26: https://pitch.com/v/slide-deck-jq3j7w"}
+{"kind":"slide","id":"sl/3kvccb","slide":24,"title":"MUSTAFA","textShapes":7}
+{"kind":"textbox","id":"sh/69knit43","slide":24,"name":"Rectangle 8","text":"MUSTAFA","textPreview":"MUSTAFA","textChars":7,"textLines":1,"bbox":[72,48,460,26]}
+{"kind":"textbox","id":"sh/p4f6l83m","slide":24,"name":"Rectangle 1","text":"Questions?","textPreview":"Questions?","textChars":10,"textLines":1,"bbox":[72,142,820,116]}
+{"kind":"textbox","id":"sh/436ps3m1","slide":24,"name":"Rectangle 2","text":"Product design, systems, and code.","textPreview":"Product design, systems, and code.","textChars":34,"textLines":1,"bbox":[72,280,660,54]}
+{"kind":"shape","id":"sh/vydofylk","slide":24,"name":"Rectangle 3","bbox":[72,430,1136,1]}
+{"kind":"textbox","id":"sh/ux47mt4z","slide":24,"name":"Rectangle 4","text":"Email","textPreview":"Email","textChars":5,"textLines":1,"bbox":[72,470,180,28]}
+{"kind":"textbox","id":"sh/h0v6h83q","slide":24,"name":"Rectangle 5","text":"hello@mstf.work","textPreview":"hello@mstf.work","textChars":15,"textLines":1,"bbox":[72,510,430,42]}
+{"kind":"textbox","id":"sh/gzmpo3m5","slide":24,"name":"Rectangle 6","text":"Phone","textPreview":"Phone","textChars":5,"textLines":1,"bbox":[650,470,180,28]}
+{"kind":"textbox","id":"sh/7adobelo","slide":24,"name":"Rectangle 7","text":"+1 737 389 0364","textPreview":"+1 737 389 0364","textChars":15,"textLines":1,"bbox":[650,510,430,42]}
+{"kind":"notes","id":"nt/3kvccb","slide":24,"text":"Close by returning to the positioning from slide one.\n\n[Sources]\n- User-provided Pitch deck, slide 27: https://pitch.com/v/slide-deck-jq3j7w"}

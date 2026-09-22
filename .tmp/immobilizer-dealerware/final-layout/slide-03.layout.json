@@ -1,0 +1,317 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/ofy9wn61",
+    "id": "ofy9wn61",
+    "slide": 3,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#061D16",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ah8rqlg",
+      "id": "5",
+      "name": "Rectangle 4",
+      "bbox": [
+        72,
+        48,
+        460,
+        26
+      ],
+      "geometry": "rect",
+      "text": "ENGINE IMMOBILIZER",
+      "textPreview": "ENGINE IMMOBILIZER",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ENGINE IMMOBILIZER"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ENGINE IMMOBILIZER",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#B9CBB8",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ENGINE IMMOBILIZER",
+              "fontSize": 14,
+              "color": "#B9CBB8",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cza94vmx",
+      "id": "2",
+      "name": "slide-title",
+      "bbox": [
+        72,
+        88,
+        920,
+        120
+      ],
+      "geometry": "rect",
+      "text": "Remote immobilization was the only core capability missing for Mexico.",
+      "textPreview": "Remote immobilization was the only core capability missing for Mexico.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Remote immobilization was the only"
+          },
+          {
+            "index": 2,
+            "text": "core capability missing for Mexico."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Remote immobilization was the only core capability missing for Mexico.",
+          "resolvedTextStyle": {
+            "fontSize": 50,
+            "color": "#F7F8F7",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Remote immobilization was the only core capability missing for Mexico.",
+              "fontSize": 50,
+              "color": "#F7F8F7"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d0jax03i",
+      "id": "3",
+      "name": "Rectangle 2",
+      "bbox": [
+        72,
+        210,
+        860,
+        82
+      ],
+      "geometry": "rect",
+      "text": "Sales Engineers said 90% of prospects asked for it. Motive had already lost a significant prospect, and the Q1 launch was at risk.",
+      "textPreview": "Sales Engineers said 90% of prospects asked for it. Motive had already lost a significant prospect, and the Q1 launch was at risk.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Sales Engineers said 90% of prospects asked for it. Motive had already lost a"
+          },
+          {
+            "index": 2,
+            "text": "significant prospect, and the Q1 launch was at risk."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Sales Engineers said 90% of prospects asked for it. Motive had already lost a significant prospect, and the Q1 launch was at risk.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "color": "#D7E0DB",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Sales Engineers said 90% of prospects asked for it. Motive had already lost a significant prospect, and the Q1 launch was at risk.",
+              "fontSize": 22,
+              "color": "#D7E0DB"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/twvmpszq",
+      "id": "6",
+      "name": "Picture 7",
+      "bbox": [
+        90,
+        332,
+        1100,
+        314
+      ],
+      "geometry": "roundRect",
+      "alt": "Motive Engine Immobilizer experience in Fleet View",
+      "contentType": "image/png",
+      "imageCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "imageFit": "cover",
+      "imageMask": {
+        "geometry": "roundRect",
+        "adjustmentList": [
+          {
+            "name": "adj",
+            "formula": "val 3822"
+          }
+        ]
+      },
+      "asset": {
+        "assetId": "f4798696-9a05-4614-adfe-a87afc1ea1af",
+        "contentType": "image/png",
+        "byteLength": 934736
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image.png",
+        "contentType": "image/png",
+        "byteLength": 81142
+      }
+    }
+  ],
+  "composeRuns": []
+}

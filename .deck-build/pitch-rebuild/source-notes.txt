@@ -1,0 +1,25 @@
+Primary source
+- User-provided Pitch deck: https://pitch.com/v/slide-deck-jq3j7w
+- Accessed July 28, 2026.
+- All product screenshots, project claims, metrics, and contact information are derived from that deck.
+
+Asset provenance
+- photo-collage.png: source slide 1
+- workflows-hero.png: source slide 3
+- workflows-mvp.png: source slide 10
+- workflows-improvements.png: source slide 11
+- workflows-feedback.png: source slide 12
+- workflows-variants.png: source slide 13
+- task-hub.png: source slide 14
+- review-hub.png: source slide 15
+- projects.png: source slide 16
+- document-editor.png: source slide 17
+- capstone-hero.png: source slide 19
+- tech-stack.png: source slide 21
+- ui-components.png: source slide 22
+- dashboard.png: source slide 23
+- design-system-palettes.png: source slide 24
+- foundations.png: source slide 25
+- motion-library.png: source slide 26
+
+No external web research was used.

@@ -1,0 +1,399 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/fnm0rg",
+    "id": "fnm0rg",
+    "slide": 10,
+    "layoutId": "6dc6a73c-88b4-4089-a1bc-48456e62346e",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "af47d4f0-a4a9-4724-aa8a-e7ae29e99f82",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#061D16",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "6dc6a73c-88b4-4089-a1bc-48456e62346e",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "af47d4f0-a4a9-4724-aa8a-e7ae29e99f82",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "af47d4f0-a4a9-4724-aa8a-e7ae29e99f82",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oja9sjip",
+      "id": "1",
+      "bbox": [
+        72,
+        48,
+        460,
+        26
+      ],
+      "geometry": "rect",
+      "text": "IMPACT",
+      "textPreview": "IMPACT",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#B9CBB8",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "IMPACT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "IMPACT",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#B9CBB8",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "IMPACT",
+              "fontSize": 14,
+              "color": "#B9CBB8",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ni18jehk",
+      "id": "2",
+      "bbox": [
+        72,
+        176,
+        850,
+        120
+      ],
+      "geometry": "rect",
+      "text": "Six-figure deal",
+      "textPreview": "Six-figure deal",
+      "resolvedFontSize": 76,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 76,
+        "typeface": "+mn-lt",
+        "color": "#F7F8F7",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Six-figure deal"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Six-figure deal",
+          "resolvedTextStyle": {
+            "fontSize": 76,
+            "color": "#F7F8F7",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Six-figure deal",
+              "fontSize": 76,
+              "color": "#F7F8F7",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mhs7q90z",
+      "id": "3",
+      "bbox": [
+        72,
+        292,
+        500,
+        100
+      ],
+      "geometry": "rect",
+      "text": "closed",
+      "textPreview": "closed",
+      "resolvedFontSize": 76,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 76,
+        "typeface": "+mn-lt",
+        "color": "#B9CBB8",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "closed"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "closed",
+          "resolvedTextStyle": {
+            "fontSize": 76,
+            "color": "#B9CBB8",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "closed",
+              "fontSize": 76,
+              "color": "#B9CBB8",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1gjqhoze",
+      "id": "4",
+      "bbox": [
+        760,
+        240,
+        410,
+        110
+      ],
+      "geometry": "rect",
+      "text": "Workflows helped Educative close its biggest customer yet.",
+      "textPreview": "Workflows helped Educative close its biggest customer yet.",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "color": "#F7F8F7",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Workflows helped Educative"
+          },
+          {
+            "index": 2,
+            "text": "close its biggest customer yet."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Workflows helped Educative close its biggest customer yet.",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "color": "#F7F8F7",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Workflows helped Educative close its biggest customer yet.",
+              "fontSize": 26,
+              "color": "#F7F8F7",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0vapojit",
+      "id": "5",
+      "bbox": [
+        72,
+        600,
+        1136,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#28483E",
+      "lineColor": "#28483E",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zuh8feh8",
+      "id": "6",
+      "bbox": [
+        72,
+        626,
+        760,
+        44
+      ],
+      "geometry": "rect",
+      "text": "The outcome tied the product directly to enterprise growth.",
+      "textPreview": "The outcome tied the product directly to enterprise growth.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#BFD0C8",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The outcome tied the product directly to enterprise growth."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The outcome tied the product directly to enterprise growth.",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#BFD0C8",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The outcome tied the product directly to enterprise growth.",
+              "fontSize": 18,
+              "color": "#BFD0C8",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

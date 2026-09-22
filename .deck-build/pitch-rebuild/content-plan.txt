@@ -1,0 +1,20 @@
+Communication job
+By the end, hiring managers should understand Mustafa as a product designer who can move from research and systems thinking to shipped software because three projects demonstrate a consistent end-to-end approach.
+
+Narrative arc
+1. Positioning
+2. Three-project overview
+3. Workflows: context, research, problem framing, build, iteration, shipped system, impact
+4. Capstone Matchmaker: constraint, code-first approach, shipped product
+5. Design System: foundations and motion
+6. Contact
+
+Visual system
+- 16:9, 1280 × 720
+- Cool white #F7F8F7, blush #F5EDEF, deep green #061D16
+- Editorial serif titles with restrained sans-serif supporting copy
+- Large product screenshots, generous margins, minimal chrome
+- No slide numbers inside the narrative
+
+Source limitation
+The user supplied a public Pitch viewer rather than a downloadable source PPTX. The deck is therefore rebuilt as editable PowerPoint objects using the source deck’s visible typography, palette, spacing, and product imagery rather than duplicating inherited Pitch slide objects.

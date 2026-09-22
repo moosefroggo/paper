@@ -1,0 +1,20 @@
+All added project claims and assets come from user-provided local sources.
+
+Primary case-study source
+- /Users/mustafa/paper/engine-immobilizer.html
+
+Visual assets
+- /Users/mustafa/paper/case-media/engine/hero.mp4 (representative frame extracted at 12 seconds)
+- /Users/mustafa/paper/case-media/engine/admin1.0.png
+- /Users/mustafa/paper/case-media/engine/Admin2.0.png
+- /Users/mustafa/paper/case-media/engine/customer-call.png
+- /Users/mustafa/paper/case-media/engine/iteration-final.png
+
+Claims used
+- Sales Engineers reported that 90% of Mexico prospects wanted remote immobilization.
+- Motive had lost a significant prospect because the capability was missing.
+- The project launched across Hardware, Tracking, and Platform.
+- Fleet managers, not drivers, owned the immobilization control.
+- Immobilization occurred about five times per month, often after attempted robbery or drunk driving.
+- Dead zones, cut wiring, tampering, and signal jamming required fallback and alert states.
+- The launch added $8M to Motive ARR and supported lower insurance premiums and cargo-theft reduction.

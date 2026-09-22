@@ -1,0 +1,9 @@
+Intentional departures from the 27-slide source deck
+- Removed the outdated numbered agenda and replaced it with a three-project overview.
+- Removed the team roster because it did not advance the project story.
+- Combined repetitive Workflows screenshot slides into two synthesis slides.
+- Reframed the one-week MVP and eight-month platform timeline so the claims no longer conflict.
+- Removed the standalone tech-stack inventory and integrated it into the Capstone build story.
+- Removed template remnants such as “Date” and “Nectar Social.”
+- Corrected visible grammar and spelling issues.
+- Omitted the opening $8M ARR claim because the current deck does not include the supporting case study.

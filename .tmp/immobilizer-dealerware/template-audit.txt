@@ -1,0 +1,31 @@
+Communication job: By the end, Dealerware HR should understand that Mustafa has directly relevant automotive and fleet-product experience because he led a safety-critical, cross-platform hardware/software launch that unlocked $8M in ARR.
+
+Source structure
+- 19-slide 16:9 portfolio deck, 1280 x 720.
+- One master and one title layout; most content is slide-local.
+- Core visual system alternates warm white/pale blush slides with deep green section and impact slides.
+- Reusable source patterns: dark problem hero (slide 3), light research comparison (slide 4), light product-direction split (slide 6), single-product screenshot (slides 8–11), dark metric impact (slide 12), two-screen comparison (slide 14).
+- Source deck includes embedded video assets; the stock template inspector attempted to decode a QuickTime payload as an image. Existing artifact-tool inspect inventory and independently rendered slide PNGs were used for the complete source audit.
+
+Typography and spacing
+- Primary type: a clean sans serif, with large sentence-case headings and small uppercase/label eyebrows.
+- Heading sizes and placements are preserved from cloned source slides.
+- Content frame generally uses 72–102 px margins and a strong 8/16/24/32 px spacing rhythm.
+- Edited copy will be shortened to the inherited text boxes; no font-size reduction is planned.
+
+Brand and assets
+- Deep green: section/problem/impact slides.
+- Warm white and pale blush: explanatory slides.
+- Accent dots and bullets use muted green or burnt orange.
+- Product media is framed inside large rounded screenshots or laptop-like black frames.
+
+Insertion contract
+- Preserve every original slide.
+- Insert five Immobilizer slides after Selected Work, cloned from source slides 3, 14, 3, 6, and 12.
+- Rewrite only inherited text objects listed in template-frame-map.json.
+- Replace only inherited image objects listed in template-frame-map.json with user-provided Immobilizer assets.
+- Preserve all masters, layouts, object geometry, typography, and remaining source content.
+
+Placeholder audit
+- Existing inspect inventory reports no visible default prompt text.
+- Final PPTX XML will be checked for empty structural placeholders.

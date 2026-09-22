@@ -1,0 +1,10 @@
+Intentional departures from source slides
+
+- Output slide 1 / source slide 1: Replace one opening credential with the $8M Immobilizer outcome so the automotive relevance appears immediately.
+- Output slide 2 / source slide 2: Reorder the three featured projects so Engine Immobilizer is first; Design System remains in the deck as supporting work but is no longer listed among the three featured case studies.
+- Output slide 3 / source slide 3: Convert the Workflows problem hero into the Immobilizer market-blocker opening and replace the inherited hero image.
+- Output slide 4 / source slide 14: Convert the build-approach comparison into an Admin 1.0 versus planned Admin 2.0 systems-complexity slide, using the inherited two-screen image frames.
+- Output slide 5 / source slide 3: Convert the same hero pattern into customer-research evidence and replace the inherited image with the research-call asset.
+- Output slide 6 / source slide 6: Convert the product-direction split into the safety model and replace the inherited product screenshot with the final Immobilizer design.
+- Output slide 7 / source slide 12: Convert the Workflows impact metric into the Immobilizer $8M ARR outcome.
+- Output slides 8–24: Preserve the original slides 3–19 in their original order.

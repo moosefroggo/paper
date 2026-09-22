@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-08-05T22:07:02.439Z",
+  "workspace": "/Users/mustafa/paper/.tmp/immobilizer-dealerware",
+  "finalPptx": "/Users/mustafa/paper/Mustafa-Portfolio-Deck-Dealerware.pptx",
+  "starterPptx": "/Users/mustafa/paper/.tmp/immobilizer-dealerware/template-starter.pptx",
+  "mapPath": "/Users/mustafa/paper/.tmp/immobilizer-dealerware/template-frame-map.json",
+  "starterLayoutDir": "/Users/mustafa/paper/.tmp/immobilizer-dealerware/template-starter-layout",
+  "finalLayoutDir": "/Users/mustafa/paper/.tmp/immobilizer-dealerware/final-layout",
+  "editDir": "/Users/mustafa/paper/.tmp/immobilizer-dealerware",
+  "issueCount": 0,
+  "issues": []
+}
