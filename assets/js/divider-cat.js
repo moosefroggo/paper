@@ -667,7 +667,7 @@
 
   const shouldPlayIntro = (
     !reduceMotion
-    && window.innerWidth > 760
+    && !window.matchMedia('(max-width: 760px), (max-width: 1024px) and (pointer: coarse)').matches
     && (forceIntro || !introSeen)
   )
 

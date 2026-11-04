@@ -676,7 +676,87 @@ h1 {
   display: none;
 }
 
-@media (max-width: 760px) {
+@media (min-width: 761px) {
+  .cell.statement {
+    padding-right: clamp(28px, 3vw, 44px);
+  }
+}
+
+@media (min-width: 761px) and (max-height: 900px) {
+  .cell {
+    padding: clamp(12px, 3vh, 24px) clamp(24px, 3vw, 44px);
+  }
+
+  .project-list {
+    --project-row-padding: 1px;
+
+    gap: clamp(10px, 2vh, 18px);
+  }
+
+  .cell-title {
+    font-size: clamp(1.1rem, min(2.3vw, 4.2vh), 2rem);
+  }
+
+  .project-row {
+    font-size: clamp(12px, min(1.2vw, 2.6vh), 14px);
+    line-height: 1.2;
+  }
+
+  .pitch-link {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 761px) and (max-height: 700px) {
+  html,
+  body {
+    height: auto;
+    overflow: auto;
+    overscroll-behavior: auto;
+  }
+
+  .hero-grid {
+    height: auto;
+    max-height: none;
+    grid-template-rows: 50svh minmax(360px, 1fr);
+    overflow: visible;
+  }
+
+  .hero-grid::before,
+  .hero-grid::after {
+    position: absolute;
+  }
+
+  .statement {
+    gap: 18px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .manifesto {
+    column-gap: 24px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, min(6.5vw, 10svh), 10rem);
+  }
+
+  .cell-title {
+    font-size: clamp(1.35rem, min(2.4vw, 5svh), 2.8rem);
+  }
+
+  .project-row {
+    font-size: clamp(0.76rem, min(1.2vw, 2.5svh), 1.2rem);
+  }
+
+  .hero-body,
+  .manifesto-body {
+    font-size: clamp(0.875rem, min(1.2vw, 3svh), 1.15rem);
+  }
+}
+
+/* Touch layouts stay in document flow, including phones in landscape. */
+@media (max-width: 760px), (max-width: 1024px) and (pointer: coarse) {
   html,
   body {
     height: auto;
@@ -765,10 +845,11 @@ h1 {
   }
 
   .project-row {
-    gap: 12px;
-    padding: 6px 0;
-    font-size: 14px;
-    line-height: 1.35;
+    gap: 16px;
+    min-height: 44px;
+    padding: 12px 0;
+    font-size: 16px;
+    line-height: 1.45;
   }
 
   .project-row span:first-child {
@@ -777,15 +858,52 @@ h1 {
   }
 
   .pitch-link {
-    font-size: 14px;
+    min-height: 44px;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
   }
 
   .project-list {
-    --project-item-gap: 10px;
-    --project-row-padding: 4px;
+    --project-item-gap: 4px;
+    --project-row-padding: 12px;
 
     gap: 18px;
-    padding-bottom: 8px;
+    padding-bottom: 20px;
+  }
+
+  .cell-title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .hero-body,
+  .manifesto-body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .role-line {
+    line-height: 1.4;
+  }
+
+  .profile-links {
+    gap: 0 20px;
+    font-size: 14px;
+  }
+
+  .profile-links > a,
+  .copy-email,
+  .mobile-footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .cursor-hint,
+  .hero-grid::before,
+  .hero-grid::after {
+    display: none;
   }
 
   .project-stack {
@@ -866,85 +984,6 @@ h1 {
     gap: 12px 22px;
   }
 
-}
-
-@media (min-width: 761px) {
-  .cell.statement {
-    padding-right: clamp(28px, 3vw, 44px);
-  }
-}
-
-@media (min-width: 761px) and (max-height: 900px) {
-  .cell {
-    padding: clamp(12px, 3vh, 24px) clamp(24px, 3vw, 44px);
-  }
-
-  .project-list {
-    --project-row-padding: 1px;
-
-    gap: clamp(10px, 2vh, 18px);
-  }
-
-  .cell-title {
-    font-size: clamp(1.1rem, min(2.3vw, 4.2vh), 2rem);
-  }
-
-  .project-row {
-    font-size: clamp(12px, min(1.2vw, 2.6vh), 14px);
-    line-height: 1.2;
-  }
-
-  .pitch-link {
-    font-size: 0.75rem;
-  }
-}
-
-@media (min-width: 761px) and (max-height: 700px) {
-  html,
-  body {
-    height: auto;
-    overflow: auto;
-    overscroll-behavior: auto;
-  }
-
-  .hero-grid {
-    height: auto;
-    max-height: none;
-    grid-template-rows: 50svh minmax(360px, 1fr);
-    overflow: visible;
-  }
-
-  .hero-grid::before,
-  .hero-grid::after {
-    position: absolute;
-  }
-
-  .statement {
-    gap: 18px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .manifesto {
-    column-gap: 24px;
-  }
-
-  h1 {
-    font-size: clamp(3rem, min(6.5vw, 10svh), 10rem);
-  }
-
-  .cell-title {
-    font-size: clamp(1.35rem, min(2.4vw, 5svh), 2.8rem);
-  }
-
-  .project-row {
-    font-size: clamp(0.76rem, min(1.2vw, 2.5svh), 1.2rem);
-  }
-
-  .hero-body,
-  .manifesto-body {
-    font-size: clamp(0.875rem, min(1.2vw, 3svh), 1.15rem);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
