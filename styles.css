@@ -361,16 +361,12 @@ a:focus-visible {
 }
 
 h1 {
-  --heading-metal: linear-gradient(
+  --heading-gradient: linear-gradient(
     180deg,
-    #343c46 0%,
-    #8b949f 19%,
-    #d7dce2 28%,
-    #626b76 40%,
-    #252d37 50%,
-    #8e98a4 65%,
-    #c6cdd6 76%,
-    #545e6a 100%
+    #050505 0%,
+    #111111 45%,
+    #2b2b2b 80%,
+    #5d5d5d 100%
   );
 
   max-width: 650px;
@@ -385,13 +381,12 @@ h1 {
 @supports (background-clip: text) or (-webkit-background-clip: text) {
   .statement h1,
   .statement .photo-trigger {
-    background-image: var(--heading-metal);
+    background-image: var(--heading-gradient);
     background-size: 100% 1em;
     background-repeat: repeat-y;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0.3px rgb(47 55 64 / 35%);
   }
 }
 
@@ -401,7 +396,6 @@ h1 {
     background: none;
     color: CanvasText;
     -webkit-text-fill-color: currentColor;
-    -webkit-text-stroke: 0;
   }
 }
 
