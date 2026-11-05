@@ -2,3 +2,25 @@
 .DS_Store
 crystal-orb/
 crystal-orb/
+
+# Personal documents and presentation exports
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.key
+*.odp
+*.odt
+*.inspect.ndjson
+~$*
+
+# Private document sources and generated previews
+/.deck-build/
+/.resume-build/
+/.qa-letter-update/
+/.tmp/immobilizer-dealerware/
+/Mustafa-Portfolio-Deck-Rebuilt/
+/tmp/pdfs/
+/scripts/combine_chancenkarte.py
+/scripts/restyle_chancenkarte_cv.py
