@@ -120,6 +120,10 @@ a:focus-visible {
   border-radius: 8px;
 }
 
+.case-study video {
+  height: auto;
+}
+
 .case-meta {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -392,7 +396,7 @@ a:focus-visible {
   font-size: 0.75rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 700px), (max-width: 1024px) and (pointer: coarse) {
   .site-header,
   .case-study,
   .site-footer {
@@ -400,11 +404,28 @@ a:focus-visible {
   }
 
   .site-header {
-    padding: 22px 0;
+    padding: 12px 0;
+  }
+
+  .wordmark,
+  .back-link,
+  .case-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .back-link {
+    gap: 6px;
+    font-size: 14px;
   }
 
   .case-hero {
-    padding: 86px 0 76px;
+    padding: 48px 0;
+  }
+
+  .case-hero-media {
+    margin-top: 40px;
   }
 
   .case-hero h1 {
@@ -455,6 +476,10 @@ a:focus-visible {
 
   .compare-pair {
     display: block;
+  }
+
+  .compare-pair > div + div {
+    margin-top: 24px;
   }
 
   .feature-list li {
