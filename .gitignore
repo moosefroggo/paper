@@ -15,6 +15,9 @@ crystal-orb/
 *.inspect.ndjson
 ~$*
 
+# Public portfolio resume
+!/resume.pdf
+
 # Private document sources and generated previews
 /.deck-build/
 /.resume-build/
