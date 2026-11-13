@@ -55,7 +55,7 @@
       this.affectionSpawnElapsed = 0
       this.affectionSpawnInterval = 0.2
       this.affectionSequence = 0
-      this.frameInterval = 1000 / 30
+      this.idleFrameInterval = 1000 / 30
       this.lastFrame = performance.now()
 
       this.resize()
@@ -116,8 +116,9 @@
       }
 
       const elapsed = time - this.lastFrame
+      const affectionActive = !reduceMotion && (this.isPetting || this.affectionParticles.length > 0)
 
-      if (elapsed < this.frameInterval) {
+      if (!affectionActive && elapsed < this.idleFrameInterval) {
         requestAnimationFrame((nextTime) => this.frame(nextTime))
         return
       }
