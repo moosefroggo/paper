@@ -1,0 +1,4 @@
+Contact: mailto:hello@mstf.work
+Expires: 2027-11-01T00:00:00Z
+Preferred-Languages: en
+Canonical: https://mstf.work/.well-known/security.txt
