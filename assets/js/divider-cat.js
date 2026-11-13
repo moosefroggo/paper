@@ -4,6 +4,7 @@
 
   if (!canvas || !trigger) return
 
+  const rust = '#ad644c'
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   class Vec2 {
@@ -28,14 +29,12 @@
       this.loafProgress = 1
       this.pointer = new Vec2(-1000, -1000)
       this.gazeAngle = -0.28
-      this.gazeInfluence = 0
       this.blinkElapsed = 0
       this.blinkDuration = 0
       this.nextBlink = 2.8
       this.tailFlick = 0
       this.tailFlickElapsed = 0
       this.tailFlickDuration = 0
-      this.tailFlickCount = 2
       this.tailLift = 0
       this.tailLiftPeak = 0
       this.nextTailFlick = 2.6 + Math.random() * 3.8
@@ -51,6 +50,7 @@
       this.nextYawn = 18 + Math.random() * 28
       this.petProgress = 0
       this.isPetting = false
+      this.petLean = new Vec2()
       this.affectionParticles = []
       this.affectionSpawnElapsed = 0
       this.affectionSpawnInterval = 0.2
@@ -85,7 +85,7 @@
       this.scale = this.width <= 760 ? 0.675 : 0.81
       this.worldWidth = this.width / this.scale
       this.worldHeight = this.height / this.scale
-      this.groundY = this.worldHeight - 2
+      this.groundY = this.worldHeight
       this.mirrorAxisX = this.width * (this.width <= 760 ? 0.82 : 0.87) / this.scale
       this.catX = this.mirrorAxisX - 32
 
@@ -95,7 +95,7 @@
 
     startLoaf() {
       this.blinkElapsed = 0.001
-      this.blinkDuration = 0.16
+      this.blinkDuration = 0.44
     }
 
     playIntro() {
@@ -136,7 +136,6 @@
         this.canvas.dataset.catState = JSON.stringify({
           loafProgress: this.loafProgress,
           gazeAngle: this.gazeAngle,
-          gazeInfluence: this.gazeInfluence,
           blink: this.eyeOpenness,
           tailFlick: this.tailFlick,
           tailLift: this.tailLift,
@@ -155,12 +154,14 @@
 
       if (!this.blinkDuration && this.blinkElapsed >= this.nextBlink) {
         this.blinkElapsed = 0
-        this.blinkDuration = 0.17
+        this.blinkDuration = 0.48
       }
 
       if (this.blinkDuration) {
         const progress = Math.min(this.blinkElapsed / this.blinkDuration, 1)
-        this.eyeOpenness = Math.abs(progress * 2 - 1)
+        const closing = Math.min(progress / 0.32, 1)
+        const reopening = Math.max((progress - 0.52) / 0.48, 0)
+        this.eyeOpenness = 1 - Math.sin(closing * Math.PI / 2) + reopening * reopening
 
         if (progress === 1) {
           this.blinkElapsed = 0
@@ -188,8 +189,7 @@
         if (this.nextTailFlick <= 0) {
           this.tailFlickElapsed = 0
           this.tailFlickDuration = 0.72 + Math.random() * 0.36
-          this.tailFlickCount = Math.random() < 0.68 ? 2 : 3
-          this.tailLiftPeak = Math.random() < 0.46 ? 0.82 + Math.random() * 0.24 : 0
+          this.tailLiftPeak = 0.65 + Math.random() * 0.35
         }
 
         return
@@ -198,9 +198,7 @@
       this.tailFlickElapsed += delta
       const progress = Math.min(this.tailFlickElapsed / this.tailFlickDuration, 1)
       const envelope = Math.pow(Math.sin(progress * Math.PI), 0.72)
-      const primary = Math.sin(progress * Math.PI * 2 * this.tailFlickCount)
-      const irregularity = Math.sin(progress * Math.PI * 3) * 0.18
-      this.tailFlick = (primary + irregularity) * envelope
+      this.tailFlick = Math.sin(progress * Math.PI * 2) * envelope
       this.tailLift = envelope * this.tailLiftPeak
 
       if (progress === 1) {
@@ -315,11 +313,9 @@
       const pointerModelY = (this.pointer.y - bounds.top) / this.scale
 
       this.gazeAngle = defaultAngle + this.headIdleOffset - this.yawnProgress * 0.1
-      this.gazeInfluence = 0
-      this.neck = defaultNeck
       this.head = new Vec2(
-        this.neck.x + Math.cos(this.gazeAngle) * 16,
-        this.neck.y + Math.sin(this.gazeAngle) * 16,
+        defaultNeck.x + Math.cos(this.gazeAngle) * 16,
+        defaultNeck.y + Math.sin(this.gazeAngle) * 16,
       )
       this.head.y = Math.min(this.head.y, this.groundY - 22)
 
@@ -346,10 +342,20 @@
       }
 
       const petTarget = this.isPetting ? 1 : 0
-      const petResponse = reduceMotion ? 1 : 1 - Math.exp(-delta * 12)
+      const petResponse = reduceMotion ? 1 : 1 - Math.exp(-delta * 8)
       this.petProgress += (petTarget - this.petProgress) * petResponse
-      this.eyeOpenness *= 1 - this.petProgress
-      this.eyeOpenness *= 1 - this.yawnProgress * 0.86
+      if (!reduceMotion) {
+        const petAngle = Math.atan2(pointerModelY - this.head.y, pointerModelX - this.head.x)
+        const reach = this.isPetting ? 3.5 : 0
+        this.petLean = Vec2.lerp(
+          this.petLean,
+          new Vec2(Math.cos(petAngle) * reach, Math.sin(petAngle) * reach),
+          petResponse,
+        )
+        this.head.x += this.petLean.x
+        this.head.y += this.petLean.y
+      }
+      this.eyeOpenness *= (1 - this.petProgress) * (1 - this.yawnProgress * 0.86)
     }
 
     updateAffection(delta) {
@@ -433,7 +439,7 @@
           context.bezierCurveTo(16, -9, 18, -2, 10, 4)
           context.lineTo(5, 9)
           context.closePath()
-          context.fillStyle = '#ff6b35'
+          context.fillStyle = rust
           context.fill()
         } else {
           context.font = '600 11px "Anormal Sans", sans-serif'
@@ -447,87 +453,73 @@
 
     drawCat(context) {
       const colors = {
-        main: '#222428',
-        shadow: '#16181b',
-        collar: '#ff6b35',
-        bell: '#ffd166',
-        eye: '#40c057',
+        main: '#252622',
+        shadow: '#181915',
+        detail: '#62645d',
+        collar: rust,
+        eye: '#a7b6a0',
       }
 
       context.save()
       context.lineCap = 'round'
       context.lineJoin = 'round'
 
-      this.drawTail(context, colors.main)
+      this.drawTail(context, colors)
       this.drawBody(context, colors)
       this.drawNeckAndHead(context, colors)
       context.restore()
     }
 
-    drawTail(context, color) {
-      const sittingPoints = {
-        start: new Vec2(this.hips.x - 8, this.hips.y - 4),
-        first: new Vec2(this.hips.x - 30, this.hips.y - 30),
-        second: new Vec2(this.hips.x - 46, this.groundY - 76),
-        end: new Vec2(this.hips.x - 40, this.groundY - 88),
-      }
-      const loafPoints = {
-        start: new Vec2(this.hips.x - 7, this.hips.y + 2),
-        first: new Vec2(
-          this.hips.x - 40 - this.tailFlick * 2,
-          this.groundY - 5 - this.tailLift * 7,
-        ),
-        second: new Vec2(
-          this.hips.x - 25 + this.tailFlick * 9,
-          this.groundY - 28 - Math.abs(this.tailFlick) * 2 - this.tailLift * 24,
-        ),
-        end: new Vec2(
-          this.hips.x + 10 + this.tailFlick * 18 + this.tailLift * 4,
-          this.groundY - 10 - Math.abs(this.tailFlick) * 5 - this.tailLift * 40,
-        ),
-      }
-      const amount = this.loafProgress
-      const start = Vec2.lerp(sittingPoints.start, loafPoints.start, amount)
-      const first = Vec2.lerp(sittingPoints.first, loafPoints.first, amount)
-      const second = Vec2.lerp(sittingPoints.second, loafPoints.second, amount)
-      const end = Vec2.lerp(sittingPoints.end, loafPoints.end, amount)
+    drawTail(context, colors) {
+      const tipX = -20 + this.tailFlick * 5
+      const tipY = -19 - this.tailLift * 7
 
+      context.save()
+      context.translate(this.hips.x, this.groundY)
       context.beginPath()
-      context.moveTo(start.x, start.y)
-      context.bezierCurveTo(first.x, first.y, second.x, second.y, end.x, end.y)
-      context.strokeStyle = color
-      context.lineWidth = 11
-      context.stroke()
+      context.moveTo(3, -8)
+      context.bezierCurveTo(-15, 4, -39, 1, -42, -10)
+      context.bezierCurveTo(-45, -22, tipX - 10, tipY - 9, tipX, tipY)
+      context.bezierCurveTo(tipX + 5, tipY + 5, tipX - 1, tipY + 6, tipX - 4, tipY + 3)
+      context.bezierCurveTo(tipX - 10, tipY - 3, -40, -17, -35, -10)
+      context.bezierCurveTo(-31, -4, -11, -6, 0, -17)
+      context.closePath()
+      context.fillStyle = colors.main
+      context.fill()
+      context.restore()
     }
 
     drawBody(context, colors) {
-      const bodyTop = this.groundY - 42 - this.loafProgress * 2
-      const bodyFront = this.thorax.x + 17
-      const bodyBaseline = this.groundY + 2
+      const backY = this.hips.y - 34
+      const shoulderX = this.thorax.x + 12
+      const shoulderY = this.thorax.y - 15
+      const ground = this.groundY
 
       context.beginPath()
-      context.moveTo(this.hips.x - 14, bodyBaseline)
-      context.quadraticCurveTo(this.hips.x - 19, this.hips.y - 20, this.hips.x + 3, bodyTop)
-      context.quadraticCurveTo(
-        (this.hips.x + this.thorax.x) * 0.5,
-        bodyTop - 8,
-        bodyFront,
-        this.thorax.y - 10,
-      )
-      context.quadraticCurveTo(bodyFront + 8, this.thorax.y + 15, bodyFront - 1, bodyBaseline)
-      context.lineTo(this.hips.x - 14, bodyBaseline)
+      context.moveTo(shoulderX - 8, ground - 8)
+      context.bezierCurveTo(shoulderX + 3, ground - 12, shoulderX + 18, ground - 9, shoulderX + 18, ground - 4)
+      context.quadraticCurveTo(shoulderX + 17, ground, shoulderX + 9, ground)
+      context.lineTo(shoulderX - 10, ground)
+      context.closePath()
+      context.fillStyle = colors.shadow
+      context.fill()
+
+      context.beginPath()
+      context.moveTo(this.hips.x + 6, ground)
+      context.bezierCurveTo(this.hips.x - 27, ground, this.hips.x - 24, backY, this.hips.x + 9, backY)
+      context.bezierCurveTo(this.hips.x + 33, backY - 2, this.thorax.x - 18, shoulderY - 7, shoulderX, shoulderY)
+      context.bezierCurveTo(shoulderX + 13, shoulderY + 6, shoulderX + 10, ground - 2, shoulderX - 8, ground - 2)
+      context.quadraticCurveTo(this.thorax.x - 28, ground, this.hips.x + 6, ground)
       context.closePath()
       context.fillStyle = colors.main
       context.fill()
 
-      const pawOpacity = 0.35 + this.loafProgress * 0.65
-      context.globalAlpha = pawOpacity
-      context.fillStyle = colors.shadow
       context.beginPath()
-      context.ellipse(this.thorax.x + 3, this.groundY - 3, 8, 4, 0, 0, Math.PI * 2)
-      context.ellipse(this.thorax.x + 17, this.groundY - 3, 8, 4, 0, 0, Math.PI * 2)
-      context.fill()
-      context.globalAlpha = 1
+      context.moveTo(shoulderX + 1, ground - 6)
+      context.quadraticCurveTo(shoulderX + 9, ground - 9, shoulderX + 13, ground - 5)
+      context.strokeStyle = colors.detail
+      context.lineWidth = 1
+      context.stroke()
     }
 
     drawNeckAndHead(context, colors) {
@@ -546,36 +538,62 @@
       context.fillStyle = colors.main
       context.fill()
 
-      const collarX = (this.thorax.x + this.head.x) * 0.5
-      const collarY = (this.thorax.y + this.head.y) * 0.5
+      const collarX = this.thorax.x + directionX * 0.4
+      const collarY = this.thorax.y + directionY * 0.4
       context.save()
       context.translate(collarX, collarY)
-      context.rotate(this.gazeAngle + Math.PI * 0.5)
+      context.rotate(Math.atan2(directionY, directionX))
       context.beginPath()
-      context.ellipse(0, 0, 13, 5, 0, 0, Math.PI * 2)
-      context.fillStyle = colors.collar
-      context.fill()
-      context.beginPath()
-      context.arc(0, 6, 3.5, 0, Math.PI * 2)
-      context.fillStyle = colors.bell
-      context.fill()
+      context.moveTo(0, -10)
+      context.quadraticCurveTo(6, 0, -0.5, 11)
+      context.strokeStyle = colors.collar
+      context.lineWidth = 4.2
+      context.stroke()
       context.restore()
 
       context.save()
       context.translate(this.head.x, this.head.y)
+
       context.beginPath()
-      context.moveTo(-15, -7)
-      context.bezierCurveTo(-14, -16, -7, -19, 2, -18)
-      context.bezierCurveTo(10, -17, 16, -11, 17, -3)
-      context.lineTo(17, 4)
-      context.bezierCurveTo(15, 10, 8, 14, 1, 15)
-      context.bezierCurveTo(-7, 15, -13, 11, -15, 6)
-      context.bezierCurveTo(-17, 1, -17, -3, -15, -7)
+      context.moveTo(1, -15)
+      context.quadraticCurveTo(6, -26, 11, -27)
+      context.quadraticCurveTo(14, -28, 16, -24)
+      context.lineTo(19, -20)
+      context.quadraticCurveTo(20, -18, 17, -19)
+      context.lineTo(13, -20)
+      context.quadraticCurveTo(13, -15, 15, -12)
+      context.closePath()
+      context.fillStyle = colors.shadow
+      context.fill()
+
+      context.beginPath()
+      context.moveTo(-17, -3)
+      context.quadraticCurveTo(-18, -10, -13, -15)
+      context.quadraticCurveTo(-14, -24, -13, -31)
+      context.quadraticCurveTo(-13, -33, -10, -30)
+      context.quadraticCurveTo(-4, -26, -1, -19)
+      context.bezierCurveTo(8, -20, 15, -14, 16, -7)
+      context.quadraticCurveTo(17, -2, 21, 0)
+      context.quadraticCurveTo(22, 3, 18, 6)
+      context.bezierCurveTo(14, 14, 3, 17, -7, 13)
+      context.quadraticCurveTo(-17, 10, -17, -3)
       context.closePath()
       context.fillStyle = colors.main
       context.fill()
+
       context.beginPath()
-      context.ellipse(11, 2, 6.5, 4.5, -0.08, 0, Math.PI * 2)
+      context.moveTo(-10, -25)
+      context.quadraticCurveTo(-7, -22, -5, -18)
+      context.strokeStyle = colors.detail
+      context.lineWidth = 1.1
+      context.stroke()
+
+      context.beginPath()
+      context.moveTo(18, -0.6)
+      context.quadraticCurveTo(22.5, -1, 21, 2.7)
+      context.quadraticCurveTo(19, 4.1, 17.5, 1.4)
+      context.closePath()
+      context.fillStyle = '#121310'
       context.fill()
 
       if (this.yawnProgress > 0.01) {
@@ -609,47 +627,44 @@
         }
       }
 
-      context.beginPath()
-      context.moveTo(-10, -12)
-      context.lineTo(-14, -30)
-      context.lineTo(-2, -18)
-      context.closePath()
-      context.fillStyle = colors.shadow
-      context.fill()
-      context.beginPath()
-      context.moveTo(-4, -14)
-      context.lineTo(-6, -32)
-      context.lineTo(6, -16)
-      context.closePath()
-      context.fillStyle = colors.main
-      context.fill()
+      this.drawEye(context, colors)
 
-      const eyeX = 6
-      const eyeY = -4
+      context.strokeStyle = '#777970'
+      context.lineWidth = 1
       context.beginPath()
-      context.ellipse(eyeX, eyeY, 5.5, 5.5 * this.eyeOpenness, 0, 0, Math.PI * 2)
+      context.moveTo(14, 4)
+      context.quadraticCurveTo(23, 1, 31, 3)
+      context.moveTo(14, 6.5)
+      context.quadraticCurveTo(24, 6.5, 29, 11)
+      context.stroke()
+
+      context.restore()
+    }
+
+    drawEye(context, colors) {
+      const openness = this.eyeOpenness
+      context.beginPath()
+      context.moveTo(-0.5, -5)
+      if (openness < 0.08) {
+        context.quadraticCurveTo(6, -1.5, 13, -5.5)
+        context.strokeStyle = colors.eye
+        context.lineWidth = 1.1
+        context.stroke()
+        return
+      }
+
+      context.quadraticCurveTo(6, -5 - openness * 2, 13, -5.5)
+      context.quadraticCurveTo(8, -5 + 10 * openness, -0.5, -5)
+      context.closePath()
       context.fillStyle = colors.eye
       context.fill()
 
-      if (this.eyeOpenness > 0.08) {
-        const pupilTravel = this.gazeInfluence * 1.6
-        const pupilX = eyeX + Math.cos(this.gazeAngle) * pupilTravel
-        const pupilY = eyeY + Math.sin(this.gazeAngle) * pupilTravel
-        context.beginPath()
-        context.ellipse(pupilX, pupilY, 1.8, 4.5 * this.eyeOpenness, 0, 0, Math.PI * 2)
-        context.fillStyle = '#050505'
-        context.fill()
-      }
-
-      context.strokeStyle = 'rgba(255, 255, 255, 0.68)'
-      context.lineWidth = 1
-      for (let whisker = -1; whisker <= 1; whisker += 1) {
-        context.beginPath()
-        context.moveTo(13, 5 + whisker * 2)
-        context.quadraticCurveTo(28, 7 + whisker * 8, 36, 12 + whisker * 14)
-        context.stroke()
-      }
-
+      context.save()
+      context.clip()
+      context.beginPath()
+      context.ellipse(8.2, -3.7, 1.35, 4.1, 0.1, 0, Math.PI * 2)
+      context.fillStyle = colors.shadow
+      context.fill()
       context.restore()
     }
   }
