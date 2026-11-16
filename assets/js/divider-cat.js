@@ -298,7 +298,7 @@
       const sittingHips = new Vec2(this.catX, this.groundY - 18)
       const sittingThorax = new Vec2(this.catX + 46, this.groundY - 48)
       const loafHips = new Vec2(this.catX, this.groundY - 14 + breathe)
-      const loafThorax = new Vec2(this.catX + 68, this.groundY - 17 + breathe)
+      const loafThorax = new Vec2(this.catX + 68, this.groundY - 25 + breathe)
 
       this.hips = Vec2.lerp(sittingHips, loafHips, this.loafProgress)
       this.thorax = Vec2.lerp(sittingThorax, loafThorax, this.loafProgress)
@@ -466,8 +466,7 @@
       context.lineJoin = 'round'
 
       this.drawTail(context, colors)
-      this.drawBody(context, colors)
-      this.drawNeckAndHead(context, colors)
+      this.drawBodyAndHead(context, colors)
       context.restore()
     }
 
@@ -483,70 +482,56 @@
       context.bezierCurveTo(-45, -22, tipX - 10, tipY - 9, tipX, tipY)
       context.bezierCurveTo(tipX + 5, tipY + 5, tipX - 1, tipY + 6, tipX - 4, tipY + 3)
       context.bezierCurveTo(tipX - 10, tipY - 3, -40, -17, -35, -10)
-      context.bezierCurveTo(-31, -4, -11, -6, 0, -17)
+      context.bezierCurveTo(-31, -4, -11, -11, 0, -23)
       context.closePath()
       context.fillStyle = colors.main
       context.fill()
       context.restore()
     }
 
-    drawBody(context, colors) {
+    createBodyPath() {
       const backY = this.hips.y - 34
       const shoulderX = this.thorax.x + 12
       const shoulderY = this.thorax.y - 15
       const ground = this.groundY
 
-      context.beginPath()
-      context.moveTo(shoulderX - 8, ground - 8)
-      context.bezierCurveTo(shoulderX + 3, ground - 12, shoulderX + 18, ground - 9, shoulderX + 18, ground - 4)
-      context.quadraticCurveTo(shoulderX + 17, ground, shoulderX + 9, ground)
-      context.lineTo(shoulderX - 10, ground)
-      context.closePath()
-      context.fillStyle = colors.shadow
-      context.fill()
-
-      context.beginPath()
-      context.moveTo(this.hips.x + 6, ground)
-      context.bezierCurveTo(this.hips.x - 27, ground, this.hips.x - 24, backY, this.hips.x + 9, backY)
-      context.bezierCurveTo(this.hips.x + 33, backY - 2, this.thorax.x - 18, shoulderY - 7, shoulderX, shoulderY)
-      context.bezierCurveTo(shoulderX + 13, shoulderY + 6, shoulderX + 10, ground - 2, shoulderX - 8, ground - 2)
-      context.quadraticCurveTo(this.thorax.x - 28, ground, this.hips.x + 6, ground)
-      context.closePath()
-      context.fillStyle = colors.main
-      context.fill()
-
-      context.beginPath()
-      context.moveTo(shoulderX + 1, ground - 6)
-      context.quadraticCurveTo(shoulderX + 9, ground - 9, shoulderX + 13, ground - 5)
-      context.strokeStyle = colors.detail
-      context.lineWidth = 1
-      context.stroke()
+      const body = new Path2D()
+      body.moveTo(this.hips.x + 6, ground)
+      body.bezierCurveTo(this.hips.x - 27, ground, this.hips.x - 24, backY, this.hips.x + 9, backY)
+      body.bezierCurveTo(this.hips.x + 33, backY - 2, this.thorax.x - 18, shoulderY - 7, shoulderX, shoulderY)
+      body.bezierCurveTo(shoulderX + 8, shoulderY + 3, shoulderX + 18, ground - 14, shoulderX + 17, ground - 7)
+      body.quadraticCurveTo(shoulderX + 16, ground, shoulderX + 5, ground)
+      body.closePath()
+      return body
     }
 
-    drawNeckAndHead(context, colors) {
+    drawBodyAndHead(context, colors) {
       const directionX = this.head.x - this.thorax.x
       const directionY = this.head.y - this.thorax.y
       const directionLength = Math.hypot(directionX, directionY) || 1
       const normalX = -directionY / directionLength
       const normalY = directionX / directionLength
 
-      context.beginPath()
-      context.moveTo(this.thorax.x + normalX * 12, this.thorax.y + normalY * 12)
-      context.lineTo(this.head.x + normalX * 10, this.head.y + normalY * 10)
-      context.lineTo(this.head.x - normalX * 10, this.head.y - normalY * 10)
-      context.lineTo(this.thorax.x - normalX * 12, this.thorax.y - normalY * 12)
-      context.closePath()
+      const silhouette = this.createBodyPath()
+      silhouette.moveTo(this.thorax.x - normalX * 12, this.thorax.y - normalY * 12)
+      silhouette.lineTo(this.head.x - normalX * 10, this.head.y - normalY * 10)
+      silhouette.lineTo(this.head.x + normalX * 10, this.head.y + normalY * 10)
+      silhouette.lineTo(this.thorax.x + normalX * 12, this.thorax.y + normalY * 12)
+      silhouette.closePath()
       context.fillStyle = colors.main
-      context.fill()
+      context.fill(silhouette)
 
-      const collarX = this.thorax.x + directionX * 0.4
-      const collarY = this.thorax.y + directionY * 0.4
+      const collarX = this.thorax.x + directionX * 0.44
+      const collarY = this.thorax.y + directionY * 0.44
       context.save()
+      // Let the band meet the moving outline at both ends.
+      context.clip(silhouette)
       context.translate(collarX, collarY)
       context.rotate(Math.atan2(directionY, directionX))
       context.beginPath()
-      context.moveTo(0, -10)
-      context.quadraticCurveTo(6, 0, -0.5, 11)
+      context.moveTo(-9, -26)
+      context.bezierCurveTo(-7, -10, 4.5, 9, 10.5, 12)
+      context.quadraticCurveTo(12, 12.5, 13.2, 10.8)
       context.strokeStyle = colors.collar
       context.lineWidth = 4.2
       context.stroke()
